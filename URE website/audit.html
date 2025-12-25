@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Encore: Board-Ready & Advisory Self-Audit</title>
+    <meta name="description" content="Interactive self-audit for executives transitioning to board and advisory roles. Assess your readiness with WCAG-compliant design.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles - WCAG Compliant Colors */
+        :root {
+            --primary-dark: #1a2b3c;      /* Deep navy - WCAG AAA against white */
+            --primary-blue: #2c5282;      /* Medium blue - WCAG AA */
+            --accent-orange: #e67e22;     /* Vibrant orange - WCAG AA */
+            --accent-green: #27ae60;      /* Kelly green - WCAG AA */
+            --light-bg: #f8fafc;          /* Very light blue-gray */
+            --medium-bg: #edf2f7;         /* Medium light background */
+            --dark-text: #1a202c;         /* High contrast dark text - WCAG AAA */
+            --medium-text: #4a5568;       /* Medium contrast text - WCAG AA */
+            --light-text: #718096;        /* Light text for less important info */
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --focus-outline: #3182ce;
+            --transition: all 0.3s ease;
+        }
+        
+        /* WCAG Focus Styles */
+        *:focus {
+            outline: 3px solid var(--focus-outline);
+            outline-offset: 2px;
+        }
+        
+        *:focus:not(:focus-visible) {
+            outline: none;
+        }
+        
+        *:focus-visible {
+            outline: 3px solid var(--focus-outline);
+            outline-offset: 2px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            padding: 20px;
+            font-size: 16px; /* Base font size for rem calculations */
+        }
+        
+        /* Skip to main content link for screen readers */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 0 0 4px 0;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(26, 43, 60, 0.08);
+            overflow: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.5px;
+        }
+        
+        h2 {
+            font-size: 1.75rem; /* 28px */
+            color: var(--primary-blue);
+            position: relative;
+            padding-bottom: 0.8rem;
+            margin-top: 2.5rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-orange);
+        }
+        
+        h3 {
+            font-size: 1.375rem; /* 22px */
+            color: var(--primary-dark);
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--medium-text);
+            font-size: 1.125rem; /* 18px */
+            line-height: 1.7;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--accent-orange);
+            color: var(--white);
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 20px 0;
+            text-decoration: none;
+            text-align: center;
+            min-height: 44px; /* WCAG touch target size */
+            min-width: 44px;
+        }
+        
+        .btn:hover, .btn:focus {
+            background-color: #d35400; /* Darker orange for contrast */
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(231, 126, 34, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--accent-orange);
+            color: var(--accent-orange);
+        }
+        
+        .btn-secondary:hover, .btn-secondary:focus {
+            background-color: var(--accent-orange);
+            color: var(--white);
+        }
+        
+        /* Header */
+        .quiz-header {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: var(--white);
+            padding: 60px 40px 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .quiz-header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-green));
+        }
+        
+        .instructions {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            border-left: 6px solid var(--accent-orange);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .instructions h3 {
+            color: var(--primary-dark);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        .instructions p {
+            color: var(--dark-text);
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+        
+        .instructions strong {
+            color: var(--primary-blue);
+        }
+        
+        /* Progress indicator */
+        .progress-indicator {
+            margin: 30px auto 0;
+            max-width: 800px;
+        }
+        
+        .progress-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: var(--accent-green);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        /* Quiz Sections */
+        .quiz-content {
+            padding: 40px;
+        }
+        
+        .quiz-section {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .quiz-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        /* Question Items */
+        .question-item {
+            background-color: var(--medium-bg);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .question-item:hover {
+            box-shadow: 0 8px 24px rgba(26, 43, 60, 0.08);
+            border-color: var(--accent-orange);
+        }
+        
+        .question-item:focus-within {
+            border-color: var(--focus-outline);
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+        }
+        
+        .question-text {
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            line-height: 1.5;
+        }
+        
+        /* Rating Scale - WCAG Accessible */
+        .rating-scale {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .rating-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 15px 10px;
+            border-radius: 8px;
+            width: calc(20% - 10px);
+            min-width: 80px;
+            background-color: var(--white);
+            border: 2px solid var(--border-color);
+        }
+        
+        .rating-option:hover, .rating-option:focus {
+            background-color: rgba(231, 126, 34, 0.1);
+            border-color: var(--accent-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(231, 126, 34, 0.15);
+        }
+        
+        .rating-option.selected {
+            background-color: rgba(231, 126, 34, 0.15);
+            border: 3px solid var(--accent-orange);
+            box-shadow: 0 6px 16px rgba(231, 126, 34, 0.2);
+        }
+        
+        .rating-number {
+            width: 48px;
+            height: 48px;
+            background-color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            border: 3px solid var(--border-color);
+            transition: var(--transition);
+            color: var(--dark-text);
+        }
+        
+        .rating-option.selected .rating-number {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            border-color: var(--accent-orange);
+        }
+        
+        .rating-label {
+            font-size: 0.875rem;
+            text-align: center;
+            color: var(--medium-text);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        /* Score Display */
+        .score-display {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+            display: none;
+            border: 6px solid var(--accent-orange);
+        }
+        
+        .score-display.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .total-score {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-orange);
+            margin: 10px 0;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .score-category {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 25px 0 15px;
+            color: var(--white);
+        }
+        
+        .score-description {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.7;
+        }
+        
+        .score-breakdown {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            gap: 20px;
+        }
+        
+        .section-score {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 10px;
+            min-width: 200px;
+            flex: 1;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .section-score h4 {
+            color: var(--white);
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-score-value {
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: var(--accent-green);
+        }
+        
+        .section-max {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 5px;
+        }
+        
+        /* Results Categories */
+        .results-categories {
+            margin-top: 60px;
+            display: none;
+        }
+        
+        .results-categories.show {
+            display: block;
+            animation: fadeIn 0.5s ease 0.3s both;
+        }
+        
+        .result-category {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 30px rgba(26, 43, 60, 0.1);
+            border-left: 8px solid var(--accent-orange);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .result-category.market-ready {
+            border-left-color: var(--accent-green);
+        }
+        
+        .result-category.operator-trap {
+            border-left-color: #f39c12;
+        }
+        
+        .result-category.invisible-executive {
+            border-left-color: #e74c3c;
+        }
+        
+        .result-category h3 {
+            margin-top: 0;
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+        
+        .result-category p {
+            color: var(--medium-text);
+            font-size: 1.125rem;
+        }
+        
+        /* Footer */
+        .quiz-footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .quiz-footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-green));
+        }
+        
+        .quiz-footer p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto 25px;
+            font-size: 1.125rem;
+        }
+        
+        /* ARIA Live Region for Screen Readers */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        .aria-live {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 15px;
+            }
+            
+            h1 {
+                font-size: 1.875rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .quiz-header, .quiz-content, .quiz-footer {
+                padding: 30px 20px;
+            }
+            
+            .instructions {
+                padding: 25px 20px;
+            }
+            
+            .rating-scale {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .rating-option {
+                width: 100%;
+                max-width: 300px;
+                flex-direction: row;
+                justify-content: flex-start;
+                padding: 15px 20px;
+                text-align: left;
+            }
+            
+            .rating-number {
+                margin-bottom: 0;
+                margin-right: 20px;
+                flex-shrink: 0;
+            }
+            
+            .rating-label {
+                text-align: left;
+                font-size: 1rem;
+            }
+            
+            .score-breakdown {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-score {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .total-score {
+                font-size: 3rem;
+            }
+            
+            .question-item {
+                padding: 25px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.625rem;
+            }
+            
+            h2 {
+                font-size: 1.375rem;
+            }
+            
+            .btn {
+                padding: 14px 24px;
+                font-size: 0.9375rem;
+                width: 100%;
+            }
+            
+            .section-score-value {
+                font-size: 2.25rem;
+            }
+        }
+        
+        /* High Contrast Mode Support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-dark: #000000;
+                --primary-blue: #00008b;
+                --accent-orange: #ff8c00;
+                --accent-green: #006400;
+                --dark-text: #000000;
+                --medium-text: #000000;
+                --white: #ffffff;
+                --border-color: #000000;
+            }
+            
+            .instructions {
+                background-color: #ffffff;
+                border: 2px solid #000000;
+            }
+            
+            .question-item {
+                border: 2px solid #000000;
+            }
+            
+            .rating-option {
+                border: 2px solid #000000;
+            }
+            
+            .rating-option.selected {
+                border: 3px solid #000000;
+            }
+        }
+        
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .btn:hover, .btn:focus,
+            .rating-option:hover, .rating-option:focus {
+                transform: none;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to Main Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- ARIA Live Region for Screen Readers -->
+    <div class="aria-live" aria-live="polite" aria-atomic="true" id="live-region"></div>
+    
+    <div class="container">
+        <!-- Quiz Header -->
+        <div class="quiz-header">
+            <h1>The Executive Encore: Board-Ready & Advisory Self-Audit</h1>
+            
+            <div class="instructions" role="region" aria-labelledby="instructions-heading">
+                <h3 id="instructions-heading">Instructions</h3>
+                <p><strong>Rate yourself on a scale of 1–5 for each statement.</strong> Be honest—this is the gap analysis between where you are and your first paid retainer.</p>
+                <p><strong>Scoring:</strong> 1 = Strongly Disagree, 2 = Disagree, 3 = Neutral, 4 = Agree, 5 = Strongly Agree</p>
+                <p>Use the number keys 1-5 to quickly select ratings, or navigate with arrow keys and press Space to select.</p>
+            </div>
+            
+            <div class="progress-indicator">
+                <div class="progress-text">Progress: <span id="progress-count">0</span> of 12 questions answered</div>
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" aria-label="Quiz progress">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Content -->
+        <main id="main-content" class="quiz-content">
+            <!-- Section 1: Positioning & "The Pivot" -->
+            <section class="quiz-section" id="section1" aria-labelledby="section1-heading">
+                <h2 id="section1-heading">Section 1: Positioning & "The Pivot"</h2>
+                
+                <div class="question-item" data-section="1" data-question="1" role="group" aria-labelledby="q1-label">
+                    <div class="question-text" id="q1-label">
+                        Value Prop: I can describe the "Enterprise Value" I create in 30 seconds without mentioning my job title or my former company's name.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-item" data-section="1" data-question="2" role="group" aria-labelledby="q2-label">
+                    <div class="question-text" id="q2-label">
+                        The Advisor Bio: I have a 1-page "Board Bio" that highlights governance, risk, and strategy rather than a 4-page resume of tactical duties.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-item" data-section="1" data-question="3" role="group" aria-labelledby="q3-label">
+                    <div class="question-text" id="q3-label">
+                        The "Product": I have identified 3 specific "pain points" in mid-market companies that I can solve better than anyone else (e.g., "Post-merger integration for SaaS firms").
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section 2: Market Authority (The Inbound Engine) -->
+            <section class="quiz-section" id="section2" aria-labelledby="section2-heading">
+                <h2 id="section2-heading">Section 2: Market Authority (The Inbound Engine)</h2>
+                
+                <div class="question-item" data-section="2" data-question="1" role="group" aria-labelledby="q4-label">
+                    <div class="question-text" id="q4-label">
+                        LinkedIn Alignment: My LinkedIn profile is written for a Private Equity Partner or CEO looking for help, not a HR recruiter looking for a full-time hire.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-item" data-section="2" data-question="2" role="group" aria-labelledby="q5-label">
+                    <div class="question-text" id="q5-label">
+                        Content Credibility: I have at least 3 "Points of View" or articles published that demonstrate my unique perspective on industry trends.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-item" data-section="2" data-question="3" role="group" aria-labelledby="q6-label">
+                    <div class="question-text" id="q6-label">
+                        The "One-Sheet": I have a professional document that outlines my "Service Menu" (Advisory, Fractional, or Project-based) and how I charge for them.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section 3: The Ecosystem (The Hidden Market) -->
+            <section class="quiz-section" id="section3" aria-labelledby="section3-heading">
+                <h2 id="section3-heading">Section 3: The Ecosystem (The Hidden Market)</h2>
+                
+                <div class="question-item" data-section="3" data-question="1" role="group" aria-labelledby="q7-label">
+                    <div class="question-text" id="q7-label">
+                        The PE/VC Connection: I am on the first-name basis with at least 3 Talent Partners at Private Equity firms that specialize in my industry.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-item" data-section="3" data-question="2" role="group" aria-labelledby="q8-label">
+                    <div class="question-text" id="q8-label">
+                        The Gatekeeper Network: My "Power 50" (former auditors, bankers, and lawyers) know exactly what kind of board or fractional seats I am looking for.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-item" data-section="3" data-question="3" role="group" aria-labelledby="q9-label">
+                    <div class="question-text" id="q9-label">
+                        The Referral Loop: I have a systematic way to stay "top of mind" with my network without sounding like I'm asking for a favor.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section 4: Governance & Deal Mechanics -->
+            <section class="quiz-section" id="section4" aria-labelledby="section4-heading">
+                <h2 id="section4-heading">Section 4: Governance & Deal Mechanics</h2>
+                
+                <div class="question-item" data-section="4" data-question="1" role="group" aria-labelledby="q10-label">
+                    <div class="question-text" id="q10-label">
+                        Governance Literacy: I understand the fiduciary differences between an Advisory Board and a Fiduciary Board of Directors.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-item" data-section="4" data-question="2" role="group" aria-labelledby="q11-label">
+                    <div class="question-text" id="q11-label">
+                        Pricing Confidence: I know my "market rate" for a fractional day-rate or a monthly advisory retainer and can defend it without blinking.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-item" data-section="4" data-question="3" role="group" aria-labelledby="q12-label">
+                    <div class="question-text" id="q12-label">
+                        Equity Literacy: I know how to evaluate a "Success Fee" or equity grant in a startup or mid-market firm to ensure my upside is protected.
+                    </div>
+                    <div class="rating-scale" role="radiogroup" aria-label="Rating scale from 1 to 5">
+                        <div class="rating-option" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 - Strongly Disagree">
+                            <div class="rating-number" aria-hidden="true">1</div>
+                            <div class="rating-label">Strongly Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 - Disagree">
+                            <div class="rating-number" aria-hidden="true">2</div>
+                            <div class="rating-label">Disagree</div>
+                        </div>
+                        <div class="rating-option" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 - Neutral">
+                            <div class="rating-number" aria-hidden="true">3</div>
+                            <div class="rating-label">Neutral</div>
+                        </div>
+                        <div class="rating-option" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 - Agree">
+                            <div class="rating-number" aria-hidden="true">4</div>
+                            <div class="rating-label">Agree</div>
+                        </div>
+                        <div class="rating-option" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 - Strongly Agree">
+                            <div class="rating-number" aria-hidden="true">5</div>
+                            <div class="rating-label">Strongly Agree</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Calculate Score Button -->
+            <div style="text-align: center; margin: 50px 0;">
+                <button class="btn" id="calculateScoreBtn">Calculate My Encore Readiness Score</button>
+                <button class="btn btn-secondary" id="resetQuizBtn">Reset Quiz</button>
+            </div>
+            
+            <!-- Score Display (Hidden by Default) -->
+            <div class="score-display" id="scoreDisplay" role="region" aria-labelledby="score-heading" aria-live="polite">
+                <h2 id="score-heading">Your Encore Readiness Score</h2>
+                <div class="total-score" id="totalScore" aria-label="Total score: ">0</div>
+                <div class="score-category" id="scoreCategory">Loading...</div>
+                <div class="score-description" id="scoreDescription"></div>
+                
+                <div class="score-breakdown">
+                    <div class="section-score">
+                        <h4>Positioning & "The Pivot"</h4>
+                        <div class="section-score-value" id="section1Score" aria-label="Section 1 score: ">0</div>
+                        <div class="section-max">/ 15</div>
+                    </div>
+                    <div class="section-score">
+                        <h4>Market Authority</h4>
+                        <div class="section-score-value" id="section2Score" aria-label="Section 2 score: ">0</div>
+                        <div class="section-max">/ 15</div>
+                    </div>
+                    <div class="section-score">
+                        <h4>The Ecosystem</h4>
+                        <div class="section-score-value" id="section3Score" aria-label="Section 3 score: ">0</div>
+                        <div class="section-max">/ 15</div>
+                    </div>
+                    <div class="section-score">
+                        <h4>Governance & Deal Mechanics</h4>
+                        <div class="section-score-value" id="section4Score" aria-label="Section 4 score: ">0</div>
+                        <div class="section-max">/ 15</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results Categories (Hidden by Default) -->
+            <div class="results-categories" id="resultsCategories">
+                <h2>What Your Score Means</h2>
+                
+                <div class="result-category market-ready">
+                    <h3>45–60 Points: Market Ready</h3>
+                    <p>You are a "Plug-and-Play" asset. You likely just need better deal-flow and negotiation strategies. Your positioning is strong, your network knows what you offer, and you understand the mechanics of advisory and board roles. Focus on converting opportunities and optimizing your terms.</p>
+                </div>
+                
+                <div class="result-category operator-trap">
+                    <h3>30–44 Points: The Operator Trap</h3>
+                    <p>You have the experience, but you're still talking like an employee. We need to "productize" your brain. You may have strong operational skills but haven't yet translated them into a marketable advisory offering. Focus on repositioning your expertise for the boardroom rather than the corner office.</p>
+                </div>
+                
+                <div class="result-category invisible-executive">
+                    <h3>Below 30 Points: The Invisible Executive</h3>
+                    <p>You are at high risk of the "Retirement Cliff." Your value is high, but your visibility is zero. You have deep expertise that companies need, but you haven't built the positioning, network, or materials to be found and hired. Immediate focus on foundational positioning work is essential.</p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="quiz-footer">
+            <p>This self-audit is designed to identify gaps between where you are now and your first paid advisory retainer or board seat. Use your results to prioritize your transition strategy.</p>
+            <p>For personalized guidance on closing your gaps, consider booking a complimentary strategy session.</p>
+            <a href="#" class="btn" id="bookSessionBtn">Book a Strategy Session</a>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize quiz data
+        let quizData = {
+            sections: {
+                1: { name: "Positioning & 'The Pivot'", maxScore: 15, score: 0 },
+                2: { name: "Market Authority", maxScore: 15, score: 0 },
+                3: { name: "The Ecosystem", maxScore: 15, score: 0 },
+                4: { name: "Governance & Deal Mechanics", maxScore: 15, score: 0 }
+            },
+            questions: {},
+            answeredCount: 0,
+            totalQuestions: 12
+        };
+        
+        // Track all questions
+        document.querySelectorAll('.question-item').forEach(question => {
+            const section = question.getAttribute('data-section');
+            const questionNum = question.getAttribute('data-question');
+            const questionId = `section${section}_question${questionNum}`;
+            
+            quizData.questions[questionId] = {
+                section: parseInt(section),
+                value: 0,
+                selected: false
+            };
+        });
+        
+        // Update progress indicator
+        function updateProgress() {
+            const answered = quizData.answeredCount;
+            const total = quizData.totalQuestions;
+            const percentage = (answered / total) * 100;
+            
+            document.getElementById('progress-count').textContent = `${answered} of ${total}`;
+            document.getElementById('progress-fill').style.width = `${percentage}%`;
+            document.querySelector('.progress-bar').setAttribute('aria-valuenow', answered);
+            
+            // Announce progress to screen readers
+            if (answered > 0) {
+                announceToScreenReader(`Question ${answered} of ${total} answered. ${percentage.toFixed(0)}% complete.`);
+            }
+        }
+        
+        // Screen reader announcements
+        function announceToScreenReader(message) {
+            const liveRegion = document.getElementById('live-region');
+            liveRegion.textContent = message;
+            
+            // Clear the message after a brief delay
+            setTimeout(() => {
+                liveRegion.textContent = '';
+            }, 3000);
+        }
+        
+        // Add event listeners to rating options
+        document.querySelectorAll('.rating-option').forEach(option => {
+            // Click event
+            option.addEventListener('click', function() {
+                handleRatingSelection(this);
+            });
+            
+            // Keyboard navigation
+            option.addEventListener('keydown', function(e) {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    handleRatingSelection(this);
+                }
+                
+                // Arrow key navigation within radiogroup
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const group = this.closest('.rating-scale');
+                    const options = Array.from(group.querySelectorAll('.rating-option'));
+                    const currentIndex = options.indexOf(this);
+                    const nextIndex = (currentIndex + 1) % options.length;
+                    options[nextIndex].focus();
+                }
+                
+                if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const group = this.closest('.rating-scale');
+                    const options = Array.from(group.querySelectorAll('.rating-option'));
+                    const currentIndex = options.indexOf(this);
+                    const prevIndex = (currentIndex - 1 + options.length) % options.length;
+                    options[prevIndex].focus();
+                }
+                
+                // Number key shortcuts (1-5)
+                if (e.key >= '1' && e.key <= '5') {
+                    e.preventDefault();
+                    const value = parseInt(e.key);
+                    const group = this.closest('.rating-scale');
+                    const targetOption = group.querySelector(`.rating-option[data-value="${value}"]`);
+                    if (targetOption) {
+                        handleRatingSelection(targetOption);
+                        targetOption.focus();
+                    }
+                }
+            });
+        });
+        
+        // Handle rating selection
+        function handleRatingSelection(optionElement) {
+            const questionItem = optionElement.closest('.question-item');
+            const section = questionItem.getAttribute('data-section');
+            const questionNum = questionItem.getAttribute('data-question');
+            const value = parseInt(optionElement.getAttribute('data-value'));
+            const questionId = `section${section}_question${questionNum}`;
+            
+            // Check if this question was previously unanswered
+            const wasUnanswered = !quizData.questions[questionId].selected;
+            
+            // Update the data
+            quizData.questions[questionId].value = value;
+            quizData.questions[questionId].selected = true;
+            
+            // Update UI - remove selected from all options in this question
+            const allOptions = questionItem.querySelectorAll('.rating-option');
+            allOptions.forEach(opt => {
+                opt.classList.remove('selected');
+                opt.setAttribute('aria-checked', 'false');
+            });
+            
+            // Add selected to clicked option
+            optionElement.classList.add('selected');
+            optionElement.setAttribute('aria-checked', 'true');
+            
+            // Update section score
+            updateSectionScore(section);
+            
+            // Update answered count if this was a new answer
+            if (wasUnanswered) {
+                quizData.answeredCount++;
+                updateProgress();
+                
+                // Announce selection to screen reader
+                const questionText = questionItem.querySelector('.question-text').textContent.substring(0, 50) + '...';
+                announceToScreenReader(`Selected ${value} out of 5 for question.`);
+            }
+        }
+        
+        // Calculate section scores
+        function updateSectionScore(section) {
+            let sectionScore = 0;
+            
+            // Sum all question values for this section
+            Object.keys(quizData.questions).forEach(questionId => {
+                if (quizData.questions[questionId].section === parseInt(section)) {
+                    sectionScore += quizData.questions[questionId].value;
+                }
+            });
+            
+            // Update data
+            quizData.sections[section].score = sectionScore;
+        }
+        
+        // Calculate total score
+        function calculateTotalScore() {
+            let total = 0;
+            Object.keys(quizData.sections).forEach(section => {
+                total += quizData.sections[section].score;
+            });
+            return total;
+        }
+        
+        // Get score category
+        function getScoreCategory(totalScore) {
+            if (totalScore >= 45) {
+                return {
+                    name: "Market Ready",
+                    description: "You are a 'Plug-and-Play' asset. You likely just need better deal-flow and negotiation strategies."
+                };
+            } else if (totalScore >= 30) {
+                return {
+                    name: "The Operator Trap",
+                    description: "You have the experience, but you're still talking like an employee. We need to 'productize' your brain."
+                };
+            } else {
+                return {
+                    name: "The Invisible Executive",
+                    description: "You are at high risk of the 'Retirement Cliff.' Your value is high, but your visibility is zero."
+                };
+            }
+        }
+        
+        // Check if all questions are answered
+        function allQuestionsAnswered() {
+            return Object.values(quizData.questions).every(question => question.selected);
+        }
+        
+        // Calculate score button
+        document.getElementById('calculateScoreBtn').addEventListener('click', function() {
+            if (!allQuestionsAnswered()) {
+                const unanswered = quizData.totalQuestions - quizData.answeredCount;
+                alert(`Please answer all ${quizData.totalQuestions} questions before calculating your score. You have ${unanswered} question${unanswered > 1 ? 's' : ''} remaining.`);
+                
+                // Find first unanswered question and scroll to it
+                const firstUnanswered = document.querySelector('.question-item:not(:has(.rating-option.selected))');
+                if (firstUnanswered) {
+                    firstUnanswered.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstUnanswered.querySelector('.rating-option').focus();
+                }
+                return;
+            }
+            
+            // Calculate total score
+            const totalScore = calculateTotalScore();
+            const category = getScoreCategory(totalScore);
+            
+            // Update score display with ARIA labels
+            const totalScoreElement = document.getElementById('totalScore');
+            totalScoreElement.textContent = totalScore;
+            totalScoreElement.setAttribute('aria-label', `Total score: ${totalScore} out of 60`);
+            
+            document.getElementById('scoreCategory').textContent = category.name;
+            document.getElementById('scoreDescription').textContent = category.description;
+            
+            // Update section scores with ARIA labels
+            document.getElementById('section1Score').textContent = quizData.sections[1].score;
+            document.getElementById('section1Score').setAttribute('aria-label', `Section 1 score: ${quizData.sections[1].score} out of 15`);
+            
+            document.getElementById('section2Score').textContent = quizData.sections[2].score;
+            document.getElementById('section2Score').setAttribute('aria-label', `Section 2 score: ${quizData.sections[2].score} out of 15`);
+            
+            document.getElementById('section3Score').textContent = quizData.sections[3].score;
+            document.getElementById('section3Score').setAttribute('aria-label', `Section 3 score: ${quizData.sections[3].score} out of 15`);
+            
+            document.getElementById('section4Score').textContent = quizData.sections[4].score;
+            document.getElementById('section4Score').setAttribute('aria-label', `Section 4 score: ${quizData.sections[4].score} out of 15`);
+            
+            // Show score display
+            document.getElementById('scoreDisplay').classList.add('active');
+            
+            // Show results categories
+            document.getElementById('resultsCategories').classList.add('show');
+            
+            // Announce results to screen reader
+            announceToScreenReader(`Your total score is ${totalScore} out of 60. ${category.name}. ${category.description}`);
+            
+            // Scroll to results
+            document.getElementById('scoreDisplay').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.getElementById('scoreDisplay').focus();
+        });
+        
+        // Reset quiz button
+        document.getElementById('resetQuizBtn').addEventListener('click', function() {
+            if (confirm('Are you sure you want to reset the quiz? All your answers will be lost.')) {
+                // Reset all selections
+                document.querySelectorAll('.rating-option').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-checked', 'false');
+                });
+                
+                // Reset quiz data
+                Object.keys(quizData.questions).forEach(questionId => {
+                    quizData.questions[questionId].value = 0;
+                    quizData.questions[questionId].selected = false;
+                });
+                
+                Object.keys(quizData.sections).forEach(section => {
+                    quizData.sections[section].score = 0;
+                });
+                
+                quizData.answeredCount = 0;
+                updateProgress();
+                
+                // Hide results
+                document.getElementById('scoreDisplay').classList.remove('active');
+                document.getElementById('resultsCategories').classList.remove('show');
+                
+                // Announce reset to screen reader
+                announceToScreenReader('Quiz has been reset. All answers cleared.');
+                
+                // Scroll to top and focus first question
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                setTimeout(() => {
+                    document.querySelector('.rating-option').focus();
+                }, 500);
+            }
+        });
+        
+        // Book session button in footer
+        document.getElementById('bookSessionBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('This would redirect to your booking calendar for a strategy session.');
+            // In a real implementation: window.location.href = 'https://your-calendly-link.com';
+        });
+        
+        // Initialize progress indicator
+        updateProgress();
+        
+        // Initialize keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Ctrl + Enter to calculate score
+            if (e.ctrlKey && e.key === 'Enter') {
+                e.preventDefault();
+                document.getElementById('calculateScoreBtn').click();
+            }
+            
+            // Escape key to reset if focus is on reset button
+            if (e.key === 'Escape' && document.activeElement === document.getElementById('resetQuizBtn')) {
+                document.getElementById('resetQuizBtn').click();
+            }
+        });
+        
+        // Initialize with focus on first rating option
+        setTimeout(() => {
+            document.querySelector('.rating-option').focus();
+        }, 100);
+    </script>
+</body>
+</html>

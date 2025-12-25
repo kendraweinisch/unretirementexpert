@@ -1,0 +1,21 @@
+<svg width="420" height="140" viewBox="0 0 420 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="60%" stop-color="#1a2b3c"></stop>
+      <stop offset="100%" stop-color="#27ae60"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Main word -->
+  <text x="20" y="65" font-family="Montserrat, Arial, sans-serif" font-size="48" font-weight="900" fill="url(#mainGradient)">
+    UnRetirement
+  </text>
+
+  <!-- Accent bar -->
+  <rect x="22" y="78" width="6" height="28" rx="3" fill="#27ae60"></rect>
+
+  <!-- Sub word -->
+  <text x="40" y="102" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="4" fill="#27ae60">
+    EXPERT
+  </text>
+</svg>

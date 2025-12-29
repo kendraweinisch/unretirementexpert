@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnRetirement Expert | Board & Fractional Roles for Former Executives</title>
-    <meta name="description" content="Specialized transition guidance for former C-suite leaders moving into board seats, advisory and fractional executive roles. Build your legacy with UnRetirement Expert.">
-    <meta name="keywords" content="unretirement, board seats, fractional executive, C-suite transition, encore career, executive coaching, retired cfo, fractional cfo">
-    <meta name="author" content="UnRetirement Expert">
+    <title>UnRetirement Expert: Board Seats & Fractional CXO Roles for Retired Executives | San Diego</title>
+    <meta name="description" content="Former C-suite leaders: Transition into board seats, advisory & fractional executive roles. Get your board-ready portfolio & network. 15-min free strategy session.">
+    <meta name="keywords" content="unretirement, board seats, board director, fractional executive, fractional CFO, fractional CMO, C-suite transition, encore career, executive coaching, retired cfo, corporate governance, NACD">
+    <meta name="author" content="Kendra Weinisch | UnRetirement Expert">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "UnRetirement Expert",
+        "description": "Specialized transition guidance for former C-suite leaders moving into board seats, advisory and fractional executive roles.",
+        "email": "kendra@unretirementexpert.com",
+        "areaServed": "United States",
+        "serviceType": "Executive Coaching, Board Placement, Career Transition",
+        "founder": {
+            "@type": "Person",
+            "name": "Kendra Weinisch"
+        }
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/unretirement_expert_favicon.png">
@@ -368,6 +385,29 @@
             margin-bottom: 20px;
         }
         
+        /* Social Proof Badge */
+        .social-proof-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 12px 24px;
+            border-radius: 25px;
+            margin: 25px auto;
+            font-size: 1rem;
+            color: var(--white);
+            font-weight: 600;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-proof-badge i {
+            color: var(--accent-green);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
         /* Client Logos Section */
         .client-logos-section {
             background-color: var(--white);
@@ -573,6 +613,10 @@
             font-weight: 800;
             color: var(--primary-blue);
             margin: 20px 0;
+            background: linear-gradient(135deg, rgba(44, 82, 130, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid rgba(44, 82, 130, 0.2);
         }
         
         .service-features {
@@ -593,6 +637,50 @@
         .service-features li i {
             color: var(--accent-green);
             margin-right: 12px;
+        }
+        
+        /* Package Instructions */
+        .package-instructions {
+            background-color: rgba(39, 174, 96, 0.08);
+            border-left: 4px solid var(--accent-green);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .package-instructions h4 {
+            color: var(--accent-green);
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        
+        .package-instructions ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .package-instructions li {
+            margin-bottom: 8px;
+            color: var(--light-text);
+        }
+        
+        /* Urgency Badge */
+        .urgency-badge {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         
         /* Contact Form Styles */
@@ -711,6 +799,10 @@
             color: var(--white);
         }
         
+        .newsletter-section h2:after {
+            background-color: var(--accent-green);
+        }
+        
         .newsletter-section p {
             color: rgba(255, 255, 255, 0.95);
             margin-bottom: 30px;
@@ -786,7 +878,7 @@
             transition: max-height 0.3s ease;
         }
         
-        .faq-answer[aria-hidden="false"] {
+        .faq-answer.open {
             padding: 25px 28px;
             max-height: 1000px;
         }
@@ -1303,8 +1395,12 @@
             <div class="container">
                 <h1 id="hero-title">Your Legacy Isn't Behind You.<br>It's What You Do Next.</h1>
                 <p class="hero-subtitle">Helping former C-suite leaders transition into board seats, advisory and fractional executive roles.</p>
+                
+                <!-- Social Proof Badge -->
+               
+                
                 <div class="hero-btns">
-                    <a href="https://unretirementexpert.setmore.com" class="btn btn-large" id="bookSessionBtn" target="_blank" rel="noopener noreferrer">Book Your Free Strategy Session</a>
+                    <a href="https://unretirementexpert.setmore.com/services/1be12d35-91b8-4431-82a6-426bb9bfc696" class="btn btn-large" id="bookSessionBtn" target="_blank" rel="noopener noreferrer">Book Your Free Strategy Session</a>
                     <button class="btn btn-secondary btn-large" id="downloadRoadmapBtn">Download the Free Roadmap (PDF)</button>
                 </div>
             </div>
@@ -1316,19 +1412,19 @@
                 <h3 id="client-logos-title" class="client-logos-title">Clients include former executives from</h3>
                 <div class="client-logos-grid">
                     <div class="client-logo" tabindex="0">
-                        <img src="images/Toyota_logo.svg" alt="Toyota">
+                        <img src="images/Toyota_logo.svg" alt="Toyota - Former Toyota executives">
                     </div>
                     <div class="client-logo" tabindex="0">
-                        <img src="images/Lenovo_logo.png" alt="Lenovo">
+                        <img src="images/Lenovo_logo.png" alt="Lenovo - Former Lenovo executives">
                     </div>
                     <div class="client-logo" tabindex="0">
-                        <img src="images/Reebok_logo.png" alt="Reebok">
+                        <img src="images/Reebok_logo.png" alt="Reebok - Former Reebok executives">
                     </div>
                     <div class="client-logo" tabindex="0">
-                        <img src="images/Qualcomm_logo.png" alt="Qualcomm">
+                        <img src="images/Qualcomm_logo.png" alt="Qualcomm - Former Qualcomm executives">
                     </div>
                     <div class="client-logo" tabindex="0">
-                        <img src="images/UCSD_logo.png" alt="University of California San Diego">
+                        <img src="images/UCSD_logo.png" alt="University of California San Diego - Former UCSD executives">
                     </div>
                 </div>
             </div>
@@ -1362,7 +1458,7 @@
                     <h2 id="philosophy-title">The Core Idea: Legacy is a Verb</h2>
                     <p>For the accomplished leader, legacy isn't a title you've left behind. It's the <strong>active, intentional application of your deepest wisdom to guide what comes next.</strong></p>
                     <p>Your next chapter isn't about slowing down. It's about stepping into a different kind of influence—where your experience in finance, operations, risk, or talent becomes strategic stewardship. This is about building an active legacy.</p>
-                    <a href="#services" class="btn" id="philosophyCtaBtn">Begin building your active legacy</a>
+                    <a href="https://unretirementexpert.setmore.com/" class="btn" id="philosophyCtaBtn">Begin building your active legacy</a>
                 </div>
             </div>
         </section>
@@ -1372,7 +1468,7 @@
             <div class="container">
                 <h2 id="methodology-title">The Board Translator Methodology</h2>
                 <p>Moving from operational leader to governance advisor isn't a career change—it's a <strong>translation of your value.</strong></p>
-                <p>This structured framework takes your executive experience and makes it compelling to boards, startups, and organizations that need your wisdom.</p>
+                <p><strong>This structured framework takes your executive experience and makes it compelling to boards, startups, and organizations that need your wisdom.</strong></p>
                 
                 <div class="methodology-steps">
                     <div class="step">
@@ -1403,7 +1499,7 @@
         <!-- Services Section -->
         <section class="section-light" id="services" aria-labelledby="services-title">
             <div class="container">
-                <h2 id="services-title">Your Starting Points</h2>
+                <h2 id="services-title">Your Starting Points <span class="urgency-badge" aria-label="Limited availability">LIMITED SPOTS</span></h2>
                 
                 <div class="services-grid">
                     <!-- Service 1 -->
@@ -1421,7 +1517,7 @@
                                 <li><i class="fas fa-check" aria-hidden="true"></i> No sales pitch—just direct guidance</li>
                             </ul>
                             <div class="service-price">$0</div>
-                            <a href="https://unretirementexpert.setmore.com" class="btn" data-service="Encore Strategy Session" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
+                            <a href="https://unretirementexpert.setmore.com/services/1be12d35-91b8-4431-82a6-426bb9bfc696" class="btn" data-service="Encore Strategy Session" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
                         </div>
                     </div>
                     
@@ -1439,7 +1535,7 @@
                                 <li><i class="fas fa-check" aria-hidden="true"></i> Strategies to Beat Ageism in Hiring</li>
                             </ul>
                             <div class="service-price">$200</div>
-                            <a href="https://unretirementexpert.setmore.com" class="btn" data-service="Career Navigation Sprint" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
+                            <a href="https://unretirementexpert.setmore.com/services/83a39ca4-3bb5-4766-911e-19eca93d77b6" class="btn" data-service="Career Navigation Sprint" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
                         </div>
                     </div>
                     
@@ -1448,7 +1544,7 @@
                         <div class="service-header">
                             <div class="service-popular">MOST POPULAR</div>
                             <h3>Fractional Launch Program</h3>
-                            <p style="font-size: 0.95rem; color: var(--accent-green); font-weight: 600;">4 Weeks</p>
+                            <p style="font-size: 0.95rem; color: var(--accent-green); font-weight: 600;">4 Weeks | TRANSFORMATIONAL</p>
                         </div>
                         <div class="service-body">
                             <p><em>Position yourself as a top-tier "rent-a-CXO."</em></p>
@@ -1458,8 +1554,21 @@
                                 <li><i class="fas fa-check" aria-hidden="true"></i> Personalized networking framework and LinkedIn engagement templates</li>
                                 <li><i class="fas fa-check" aria-hidden="true"></i> Customized roadmap to attract startups and growth-stage companies</li>
                             </ul>
+                            
+                            <!-- Package Instructions -->
+                            <div class="package-instructions">
+                                <h4><i class="fas fa-info-circle"></i> How This Works:</h4>
+                                <ul>
+                                    <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
+                                    <li><strong>Full payment ($5,000)</strong> is collected at booking</li>
+                                    <li>During our first meeting, we'll <strong>schedule 3 additional sessions</strong></li>
+                                    <li>Total: <strong>4+ hours of 1:1 coaching</strong> over 4 weeks</li>
+                                    <li>Includes <strong>email support</strong> between sessions</li>
+                                </ul>
+                            </div>
+                            
                             <div class="service-price">$5,000</div>
-                            <a href="#contact-form-section" class="btn" data-service="Fractional Launch Program">LEARN MORE</a>
+                            <a href="https://unretirementexpert.setmore.com/services/a7716ce4-a105-46d8-8eae-28637282b677" class="btn" data-service="Fractional Launch Program" target="_blank" rel="noopener noreferrer">BOOK FIRST SESSION</a>
                         </div>
                     </div>
                     
@@ -1479,13 +1588,26 @@
                                 <li><i class="fas fa-check" aria-hidden="true"></i> Private equity and board member introductions</li>
                                 <li><i class="fas fa-check" aria-hidden="true"></i> Support with NACD Directorship certification (if needed)</li>
                             </ul>
+                            
+                            <!-- Package Instructions -->
+                            <div class="package-instructions">
+                                <h4><i class="fas fa-info-circle"></i> How This Works:</h4>
+                                <ul>
+                                    <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
+                                    <li><strong>Full payment ($7,000)</strong> is collected at booking</li>
+                                    <li>During our first meeting, we'll <strong>schedule 3+ additional sessions</strong></li>
+                                    <li>Total: <strong>6+ hours of 1:1 coaching</strong> over 6 weeks</li>
+                                    <li>Includes <strong>priority email support</strong> and <strong>introduction strategy</strong></li>
+                                </ul>
+                            </div>
+                            
                             <div class="service-price">$7,000</div>
-                            <a href="#contact-form-section" class="btn" data-service="Board-Ready Accelerator">LEARN MORE</a>
+                            <a href="https://unretirementexpert.setmore.com/services/0f61b381-2ebe-48b7-9130-5a470547a85d" class="btn" data-service="Board-Ready Accelerator" target="_blank" rel="noopener noreferrer">BOOK FIRST SESSION</a>
                         </div>
                     </div>
                 </div>
                 
-                <p style="text-align: center; margin-top: 40px; font-size: 0.95rem; color: var(--light-text);"><em>All engagements maintain strict confidentiality and professional standards.</em></p>
+                <p style="text-align: center; margin-top: 40px; font-size: 0.95rem; color: var(--light-text);"><em>All engagements maintain strict confidentiality and professional standards. Packages include a minimum of 4 sessions.</em></p>
             </div>
         </section>
 
@@ -1493,10 +1615,15 @@
         <section class="section-light" id="contact-form-section" aria-labelledby="contact-form-title">
             <div class="container">
                 <h2 id="contact-form-title">Get In Touch</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Have questions about my services or want to learn more about how I can help with your transition? Send me a message.</p>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Have questions about my services or want to learn more about how I can help with your transition? Send me a message through the form below.</p>
                 
                 <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/kendraweinisch@gmail.com" method="POST">
+                        <!-- Formspree sends to kendraweinisch@gmail.com -->
+                        <input type="hidden" name="_replyto" value="kendra@unretirementexpert.com">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - UnRetirement Expert">
+                        <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
+                        
                         <!-- Honey Pot Field for Spam Protection -->
                         <div class="honey-pot">
                             <label for="website">Website</label>
@@ -1538,12 +1665,14 @@
                         </div>
                         
                         <div class="form-group">
-                            <button type="submit" class="btn" id="contactSubmitBtn">Send Message</button>
+                            <button type="submit" class="btn" id="contactSubmitBtn">Send Message to Kendra</button>
                         </div>
                         
                         <div id="formStatus" class="form-status"></div>
                     </form>
                 </div>
+                
+                
             </div>
         </section>
 
@@ -1555,11 +1684,14 @@
                 
                 <img src="images/author-photo.jpg" alt="Kendra Weinisch, author of The Encore Executive" class="author-photo">
                 
-                <div class="newsletter-form">
+                <form id="newsletterForm" action="https://formspree.io/f/kendraweinisch@gmail.com" method="POST" class="newsletter-form">
+                    <input type="hidden" name="_subject" value="Book Launch Notification Signup - The Encore Executive">
+                    <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
+                    
                     <label for="newsletterEmail" class="sr-only">Your email address</label>
-                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
-                    <button class="btn btn-tertiary" id="newsletterSubmitBtn">Notify Me at Launch</button>
-                </div>
+                    <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-tertiary" id="newsletterSubmitBtn">Notify Me at Launch</button>
+                </form>
                 <p style="font-size: 0.9rem; margin-top: 20px;">No spam. Unsubscribe anytime.</p>
             </div>
         </section>
@@ -1643,8 +1775,8 @@
                     <h4>Resources</h4>
                     <ul>
                         <li><a href="#" id="footerPdfLink">Free UnRetirement Roadmap (PDF)</a></li>
-                        <li><a href="/audit.html">Free Board Readiness Audit</a></li>
-                        <li><a href="#newsletter">Book Launch Updates</a></li>
+                        <li><a href="audit.html">Free Board Readiness Audit</a></li>
+                        <li><a href="#newsletter-title">Book Launch Updates</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
@@ -1653,14 +1785,14 @@
                     <h4>Connect</h4>
                     <ul>
                         <li><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-                        <li><a href="#contact-form-section"><i class="fas fa-envelope" aria-hidden="true"></i> Contact Form</a></li>
+                        <li><a href="mailto:kendra@unretirementexpert.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email Kendra</a></li>
                         <li><a href="https://unretirementexpert.setmore.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar" aria-hidden="true"></i> Book a Session</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                © 2026. All rights reserved. | UnRetirement Expert - Board & Fractional Transition for Executive Leaders
+                © 2026. All rights reserved. | UnRetirement Expert - Board & Fractional Transition for Executive Leaders 
             </div>
         </div>
     </footer>
@@ -1671,10 +1803,13 @@
             <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
             <h3 id="pdfModalTitle">Download Your Free UnRetirement Roadmap</h3>
             <p>Get immediate access to our <strong>90-Day Prescriptive Guide</strong> with actionable strategies for transitioning to board and fractional CXO roles.</p>
-            <p>Enter your email to receive the PDF roadmap:</p>
-            <form id="pdfForm">
+            <p>Enter your email to receive the PDF roadmap and additional resources:</p>
+            <form id="pdfForm" action="https://formspree.io/f/kendraweinisch@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="PDF Download - UnRetirement Roadmap">
+                <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
+                
                 <label for="pdfEmail" class="sr-only">Your professional email address</label>
-                <input type="email" id="pdfEmail" placeholder="Your professional email address" required class="modal-input">
+                <input type="email" id="pdfEmail" name="email" placeholder="Your professional email address" required class="modal-input">
                 <div class="modal-btns">
                     <button type="submit" class="btn">Download PDF Now</button>
                     <button type="button" class="btn btn-secondary" id="cancelDownloadBtn">Maybe Later</button>
@@ -1690,9 +1825,12 @@
             <h3 id="bookModalTitle">Get Notified When "The Encore Executive" Launches</h3>
             <p>Be among the first to receive exclusive content, early access, and special pre-order discounts for my upcoming book.</p>
             <p>Enter your email to join the launch notification list:</p>
-            <form id="bookForm">
+            <form id="bookForm" action="https://formspree.io/f/kendraweinisch@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Book Launch List - The Encore Executive">
+                <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
+                
                 <label for="bookEmail" class="sr-only">Your email address</label>
-                <input type="email" id="bookEmail" placeholder="Your email address" required class="modal-input">
+                <input type="email" id="bookEmail" name="email" placeholder="Your email address" required class="modal-input">
                 <div class="modal-btns">
                     <button type="submit" class="btn btn-tertiary">Notify Me at Launch</button>
                     <button type="button" class="btn btn-secondary" id="cancelBookBtn">Maybe Later</button>
@@ -1840,7 +1978,7 @@
                 const isExpanded = question.getAttribute('aria-expanded') === 'true';
                 
                 question.setAttribute('aria-expanded', !isExpanded);
-                answer.setAttribute('aria-hidden', isExpanded);
+                answer.setAttribute('aria-hidden', !isExpanded);
                 
                 // Toggle visual indicators
                 const toggle = question.querySelector('.faq-toggle');
@@ -1944,7 +2082,8 @@
         
         // Newsletter form submission
         if(newsletterSubmitBtn) {
-            newsletterSubmitBtn.addEventListener('click', () => {
+            newsletterSubmitBtn.addEventListener('click', (e) => {
+                e.preventDefault();
                 const email = newsletterEmailInput.value;
                 if(email && email.includes('@')) {
                     openModal(bookModal);
@@ -1994,7 +2133,7 @@
         });
         
         // PDF Form submission
-        pdfForm.addEventListener('submit', (e) => {
+        pdfForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             const emailInput = pdfForm.querySelector('input[type="email"]');
@@ -2051,7 +2190,7 @@
         });
         
         // Book Form submission
-        bookForm.addEventListener('submit', (e) => {
+        bookForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             const emailInput = bookForm.querySelector('input[type="email"]');
@@ -2066,47 +2205,54 @@
                 return;
             }
             
-            // Here you would typically send the email to your server
-            if(email) {
-                // Show success message
-                const modalContent = bookForm.parentElement;
-                modalContent.innerHTML = `
-                    <button class="modal-close" id="bookModalCloseBtn" aria-label="Close modal">&times;</button>
-                    <div style="text-align: center;">
-                        <div style="font-size: 3.5rem; color: var(--accent-green); margin-bottom: 25px;" aria-hidden="true">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3>You're On The List!</h3>
-                        <p><strong>Thank you for joining "The Encore Executive" launch notification list.</strong></p>
-                        <p>I'll send updates to <strong>${email}</strong>.</p>
-                        <p style="font-size: 0.95rem; margin-top: 20px;">Look for exclusive content and pre-order opportunities in your inbox.</p>
-                        <div style="margin-top: 35px;">
-                            <button class="btn btn-tertiary" id="closeBookSuccessBtn">Close & Continue Browsing</button>
-                        </div>
+            // Show success message
+            const modalContent = bookForm.parentElement;
+            modalContent.innerHTML = `
+                <button class="modal-close" id="bookModalCloseBtn" aria-label="Close modal">&times;</button>
+                <div style="text-align: center;">
+                    <div style="font-size: 3.5rem; color: var(--accent-green); margin-bottom: 25px;" aria-hidden="true">
+                        <i class="fas fa-book"></i>
                     </div>
-                `;
-                
-                // Add event listeners to the new close button
-                document.getElementById('bookModalCloseBtn').addEventListener('click', () => closeModal(bookModal));
-                document.getElementById('closeBookSuccessBtn').addEventListener('click', () => closeModal(bookModal));
-                
-                // Announce success to screen readers
-                const liveRegion = document.getElementById('liveRegion');
-                liveRegion.textContent = 'Thank you for joining The Encore Executive launch notification list. You will receive updates at the email you provided.';
-            }
+                    <h3>You're On The List!</h3>
+                    <p><strong>Thank you for joining "The Encore Executive" launch notification list.</strong></p>
+                    <p>I'll send updates to <strong>${email}</strong>.</p>
+                    <p style="font-size: 0.95rem; margin-top: 20px;">Look for exclusive content and pre-order opportunities in your inbox.</p>
+                    <div style="margin-top: 35px;">
+                        <button class="btn btn-tertiary" id="closeBookSuccessBtn">Close & Continue Browsing</button>
+                    </div>
+                </div>
+            `;
+            
+            // Add event listeners to the new close button
+            document.getElementById('bookModalCloseBtn').addEventListener('click', () => closeModal(bookModal));
+            document.getElementById('closeBookSuccessBtn').addEventListener('click', () => closeModal(bookModal));
+            
+            // Announce success to screen readers
+            const liveRegion = document.getElementById('liveRegion');
+            liveRegion.textContent = 'Thank you for joining The Encore Executive launch notification list. You will receive updates at the email you provided.';
+            
+            // Submit form data to Formspree in the background
+            const formData = new FormData(bookForm);
+            fetch(bookForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
         });
         
-        // Contact Form Submission with Spam Protection
+        // Contact Form Submission
         if(contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
+            contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
                 // Honey pot validation
                 const honeypot = document.getElementById('website');
                 if(honeypot.value !== '') {
-                    // Likely a bot - don't process the form
                     formStatus.textContent = 'There was an error with your submission. Please try again.';
                     formStatus.className = 'form-status error';
+                    formStatus.style.display = 'block';
                     return;
                 }
                 
@@ -2124,6 +2270,7 @@
                 if(!formData.name || !formData.email || !formData.interest || !formData.message) {
                     formStatus.textContent = 'Please fill in all required fields.';
                     formStatus.className = 'form-status error';
+                    formStatus.style.display = 'block';
                     return;
                 }
                 
@@ -2132,6 +2279,7 @@
                 if(!emailRegex.test(formData.email)) {
                     formStatus.textContent = 'Please enter a valid email address.';
                     formStatus.className = 'form-status error';
+                    formStatus.style.display = 'block';
                     document.getElementById('email').focus();
                     return;
                 }
@@ -2140,54 +2288,43 @@
                 contactSubmitBtn.disabled = true;
                 contactSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
                 
-                try {
-                    // Track the form submission
-                    trackContactFormSubmission(formData);
-                    
-                    // In a real implementation, you would send this to your server
-                    // Example with Fetch API:
-                    /*
-                    const response = await fetch('https://your-server.com/api/contact', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(formData)
-                    });
-                    
-                    if (response.ok) {
-                        // Show success message
-                        formStatus.textContent = 'Thank you for your message! I\'ll get back to you within 48 hours.';
-                        formStatus.className = 'form-status success';
-                        contactForm.reset();
-                    } else {
-                        throw new Error('Server error');
+                // Submit to Formspree
+                const formDataObj = new FormData(contactForm);
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formDataObj,
+                    headers: {
+                        'Accept': 'application/json'
                     }
-                    */
-                    
-                    // For demo purposes, simulate success
-                    setTimeout(() => {
+                })
+                .then(response => {
+                    if(response.ok) {
+                        // Show success message
                         formStatus.textContent = 'Thank you for your message! I\'ll get back to you within 24-48 hours.';
                         formStatus.className = 'form-status success';
+                        formStatus.style.display = 'block';
                         contactForm.reset();
                         
-                        // Reset button
-                        contactSubmitBtn.disabled = false;
-                        contactSubmitBtn.innerHTML = 'Send Message';
-                        
-                        // Scroll to form status
-                        formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }, 1500);
-                    
-                } catch (error) {
+                        // Track the form submission
+                        trackContactFormSubmission(formData);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
                     console.error('Error:', error);
-                    formStatus.textContent = 'There was an error sending your message. Please try again or email me directly.';
+                    formStatus.textContent = 'There was an error sending your message. Please try again or email kendra@unretirementexpert.com directly.';
                     formStatus.className = 'form-status error';
-                    
+                    formStatus.style.display = 'block';
+                })
+                .finally(() => {
                     // Reset button
                     contactSubmitBtn.disabled = false;
                     contactSubmitBtn.innerHTML = 'Send Message';
-                }
+                    
+                    // Scroll to form status
+                    formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
             });
         }
         

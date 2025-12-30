@@ -234,7 +234,7 @@
             font-size: 1.1rem;
         }
         
-        /* Header & Navigation */
+        /* Header & Navigation - Enhanced with Profile Photo */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 15px rgba(26, 43, 60, 0.08);
@@ -254,6 +254,16 @@
         .logo-container {
             display: flex;
             align-items: center;
+            gap: 15px;
+        }
+        
+        .profile-photo-small {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-green);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15);
         }
         
         /* Text Logo Styles */
@@ -353,7 +363,7 @@
             min-width: 44px;
         }
         
-        /* Hero Section with updated background */
+        /* Hero Section with enhanced visual hierarchy */
         .hero {
             padding: 160px 0 100px;
             background: linear-gradient(135deg, rgba(26, 43, 60, 0.95) 0%, rgba(44, 82, 130, 0.95) 100%), url('images/hero-executive.jpg');
@@ -361,20 +371,29 @@
             background-position: center;
             color: var(--white);
             text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .hero h1 {
             font-size: 3.2rem;
             margin-bottom: 1.2rem;
             color: var(--white);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         
         .hero-subtitle {
             font-size: 1.4rem;
-            max-width: 800px;
             margin: 0 auto 2.5rem;
             color: rgba(255, 255, 255, 0.95);
             font-weight: 300;
+            max-width: 700px;
         }
         
         .hero-btns {
@@ -385,30 +404,27 @@
             margin-bottom: 20px;
         }
         
-        /* Social Proof Badge */
-        .social-proof-badge {
-            display: inline-flex;
+        /* Hero Visual Enhancement - Placeholder for Hero Image */
+        .hero-visual {
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+            width: 400px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(44, 82, 130, 0.1) 100%);
+            border-radius: 20px 20px 0 0;
+            display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgba(255, 255, 255, 0.15);
-            padding: 12px 24px;
-            border-radius: 25px;
-            margin: 25px auto;
-            font-size: 1rem;
-            color: var(--white);
-            font-weight: 600;
-            max-width: 400px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.1);
         }
         
-        .social-proof-badge i {
-            color: var(--accent-green);
-            margin-right: 10px;
-            font-size: 1.2rem;
+        .hero-visual i {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.2);
         }
         
-        /* Client Logos Section */
+        /* Client Logos Section - Enhanced with badges */
         .client-logos-section {
             background-color: var(--white);
             padding: 50px 0;
@@ -444,19 +460,31 @@
             justify-content: center;
             padding: 20px;
             background-color: var(--white);
-            border-radius: 8px;
+            border-radius: 12px;
             transition: var(--transition);
             min-width: 180px;
             height: 120px;
-            box-shadow: 0 5px 15px rgba(26, 43, 60, 0.05);
-            border: 1px solid rgba(26, 43, 60, 0.05);
+            box-shadow: 0 8px 25px rgba(26, 43, 60, 0.08);
+            border: 2px solid rgba(26, 43, 60, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .client-logo:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-green), var(--primary-blue));
         }
         
         .client-logo:hover,
         .client-logo:focus {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(26, 43, 60, 0.1);
-            border-color: rgba(39, 174, 96, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(26, 43, 60, 0.15);
+            border-color: rgba(39, 174, 96, 0.3);
             outline: none;
         }
         
@@ -477,7 +505,7 @@
             opacity: 1;
         }
         
-        /* Trusted Section */
+        /* Trusted Section with enhanced testimonials */
         .trusted-section {
             text-align: center;
             padding: 60px 0;
@@ -498,35 +526,85 @@
             max-width: 500px;
             background-color: var(--light-bg);
             padding: 35px 30px;
-            border-radius: 10px;
+            border-radius: 12px;
             text-align: left;
-            box-shadow: 0 8px 25px rgba(26, 43, 60, 0.06);
-            border-left: 4px solid var(--accent-green);
+            box-shadow: 0 10px 30px rgba(26, 43, 60, 0.08);
+            border-left: 5px solid var(--accent-green);
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(26, 43, 60, 0.12);
+        }
+        
+        .testimonial-quote {
+            font-size: 3rem;
+            color: var(--accent-green);
+            opacity: 0.2;
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-family: Georgia, serif;
         }
         
         .testimonial p {
             font-style: italic;
             margin-bottom: 25px;
             font-size: 1.05rem;
+            padding-left: 20px;
         }
         
         .testimonial-author {
             font-weight: 700;
             color: var(--primary-blue);
             font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
-        /* Philosophy Section */
+        .testimonial-author i {
+            color: var(--accent-green);
+        }
+        
+        /* Philosophy Section with visual element */
         .philosophy-section {
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         
         .philosophy-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
-        /* Methodology Section */
+        .philosophy-visual {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.08) 0%, rgba(44, 82, 130, 0.08) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(39, 174, 96, 0.2);
+        }
+        
+        .philosophy-visual i {
+            font-size: 3rem;
+            color: var(--accent-green);
+            opacity: 0.5;
+        }
+        
+        /* Methodology Section with enhanced steps */
         .methodology-steps {
             display: flex;
             flex-wrap: wrap;
@@ -541,26 +619,34 @@
             text-align: center;
             padding: 35px 25px;
             background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(26, 43, 60, 0.06);
-            border-top: 4px solid var(--accent-green);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(26, 43, 60, 0.08);
+            border-top: 5px solid var(--accent-green);
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .step:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(26, 43, 60, 0.12);
         }
         
         .step-number {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: var(--accent-green);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-secondary));
             color: var(--white);
             border-radius: 50%;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 20px;
+            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
         }
         
-        /* Services Section */
+        /* Services Section - Enhanced with badges and visual hierarchy */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -570,35 +656,40 @@
         
         .service-card {
             background-color: var(--white);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(26, 43, 60, 0.08);
+            box-shadow: 0 12px 35px rgba(26, 43, 60, 0.1);
             transition: var(--transition);
             height: 100%;
             display: flex;
             flex-direction: column;
+            position: relative;
+            border: 2px solid transparent;
         }
         
         .service-card:hover,
         .service-card:focus-within {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(26, 43, 60, 0.12);
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(26, 43, 60, 0.15);
+            border-color: rgba(39, 174, 96, 0.2);
         }
         
         .service-header {
             padding: 30px 25px 20px;
             border-bottom: 1px solid rgba(26, 43, 60, 0.05);
+            background: linear-gradient(135deg, rgba(247, 249, 252, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
         }
         
         .service-popular {
-            background-color: var(--accent-green);
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-secondary));
             color: var(--white);
             display: inline-block;
-            padding: 6px 18px;
+            padding: 8px 20px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
         }
         
         .service-body {
@@ -609,14 +700,31 @@
         }
         
         .service-price {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 800;
             color: var(--primary-blue);
             margin: 20px 0;
-            background: linear-gradient(135deg, rgba(44, 82, 130, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(44, 82, 130, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%);
             padding: 15px;
-            border-radius: 8px;
-            border: 2px solid rgba(44, 82, 130, 0.2);
+            border-radius: 10px;
+            border: 2px solid rgba(44, 82, 130, 0.15);
+            text-align: center;
+            position: relative;
+        }
+        
+        .service-price:before {
+            content: 'INVESTMENT';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-blue);
+            color: white;
+            padding: 3px 15px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
         
         .service-features {
@@ -626,8 +734,10 @@
         }
         
         .service-features li {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px dashed rgba(26, 43, 60, 0.1);
+            display: flex;
+            align-items: flex-start;
         }
         
         .service-features li:last-child {
@@ -637,21 +747,37 @@
         .service-features li i {
             color: var(--accent-green);
             margin-right: 12px;
+            margin-top: 3px;
+            flex-shrink: 0;
         }
         
         /* Package Instructions */
         .package-instructions {
             background-color: rgba(39, 174, 96, 0.08);
-            border-left: 4px solid var(--accent-green);
+            border-left: 5px solid var(--accent-green);
             padding: 20px;
             margin: 25px 0;
-            border-radius: 0 8px 8px 0;
+            border-radius: 0 10px 10px 0;
+            position: relative;
+        }
+        
+        .package-instructions:before {
+            content: 'ℹ️';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: var(--white);
+            padding: 0 5px;
+            font-size: 0.8rem;
         }
         
         .package-instructions h4 {
             color: var(--accent-green);
             margin-top: 0;
             font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .package-instructions ul {
@@ -667,20 +793,22 @@
         /* Urgency Badge */
         .urgency-badge {
             display: inline-block;
-            background-color: #e74c3c;
+            background: linear-gradient(90deg, #e74c3c, #c0392b);
             color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
+            padding: 6px 15px;
+            border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-left: 10px;
             animation: pulse 2s infinite;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+            letter-spacing: 0.5px;
         }
         
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% { transform: scale(1); box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 6px 18px rgba(231, 76, 60, 0.4); }
+            100% { transform: scale(1); box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3); }
         }
         
         /* Contact Form Styles */
@@ -689,8 +817,9 @@
             margin: 50px auto 0;
             background-color: var(--white);
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(26, 43, 60, 0.08);
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(26, 43, 60, 0.1);
+            border: 2px solid rgba(26, 43, 60, 0.05);
         }
         
         .contact-form {
@@ -708,6 +837,14 @@
             margin-bottom: 8px;
             font-weight: 600;
             color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .form-group label i {
+            color: var(--accent-green);
+            font-size: 0.9rem;
         }
         
         .form-group input,
@@ -715,7 +852,7 @@
         .form-group select {
             padding: 14px 16px;
             border: 2px solid #e2e8f0;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 1rem;
             font-family: 'Inter', sans-serif;
             transition: var(--transition);
@@ -727,6 +864,7 @@
         .form-group select:focus {
             outline: var(--focus-outline);
             border-color: var(--accent-green);
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
         }
         
         .form-group textarea {
@@ -742,7 +880,7 @@
         
         .form-status {
             padding: 15px;
-            border-radius: 6px;
+            border-radius: 8px;
             margin-top: 20px;
             font-weight: 600;
             display: none;
@@ -750,14 +888,14 @@
         
         .form-status.success {
             background-color: rgba(39, 174, 96, 0.1);
-            border: 1px solid var(--accent-green);
+            border: 2px solid var(--accent-green);
             color: var(--accent-green);
             display: block;
         }
         
         .form-status.error {
             background-color: rgba(231, 76, 60, 0.1);
-            border: 1px solid #e74c3c;
+            border: 2px solid #e74c3c;
             color: #e74c3c;
             display: block;
         }
@@ -780,19 +918,34 @@
             margin: 30px auto;
             border: 5px solid var(--accent-green);
             display: block;
+            box-shadow: 0 8px 25px rgba(26, 43, 60, 0.15);
         }
         
         /* Newsletter Signup Section */
         .newsletter-section {
-            background-color: var(--primary-blue);
+            background: linear-gradient(135deg, var(--primary-blue), #1a365d);
             color: var(--white);
             text-align: center;
             padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-secondary));
         }
         
         .newsletter-container {
             max-width: 600px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .newsletter-section h2 {
@@ -821,14 +974,16 @@
             min-width: 250px;
             padding: 16px 20px;
             border: 2px solid transparent;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 1rem;
             min-height: 44px;
+            background: rgba(255, 255, 255, 0.95);
         }
         
         .newsletter-form input:focus {
             border-color: var(--accent-green);
             outline: none;
+            background: white;
         }
         
         /* FAQ Section - Updated for Accessibility */
@@ -842,12 +997,14 @@
             border-radius: 10px;
             margin-bottom: 18px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(26, 43, 60, 0.05);
+            box-shadow: 0 5px 20px rgba(26, 43, 60, 0.08);
             border-left: 4px solid transparent;
+            transition: var(--transition);
         }
         
         .faq-item:hover {
             border-left-color: var(--accent-green);
+            box-shadow: 0 8px 25px rgba(26, 43, 60, 0.12);
         }
         
         .faq-question {
@@ -863,6 +1020,7 @@
             text-align: left;
             font-size: 1.1rem;
             color: var(--primary-dark);
+            transition: var(--transition);
         }
         
         .faq-question:hover,
@@ -888,6 +1046,8 @@
             font-size: 1.5rem;
             transition: transform 0.3s ease;
             font-weight: bold;
+            flex-shrink: 0;
+            margin-left: 15px;
         }
         
         .faq-question[aria-expanded="true"] .faq-toggle {
@@ -899,6 +1059,17 @@
             background-color: var(--primary-dark);
             color: var(--white);
             padding: 80px 0 30px;
+            position: relative;
+        }
+        
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-green), var(--primary-blue));
         }
         
         .footer-container {
@@ -976,6 +1147,18 @@
             color: var(--white);
             margin-bottom: 25px;
             font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-green);
         }
         
         .footer-links ul {
@@ -989,12 +1172,17 @@
         .footer-links a {
             color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .footer-links a:hover,
         .footer-links a:focus {
             color: var(--accent-green);
             text-decoration: underline;
+            transform: translateX(5px);
         }
         
         .copyright {
@@ -1020,6 +1208,7 @@
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
+            backdrop-filter: blur(5px);
         }
         
         .modal-overlay.active {
@@ -1037,6 +1226,8 @@
             transform: translateY(-50px);
             transition: transform 0.4s ease;
             position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-top: 5px solid var(--accent-green);
         }
         
         .modal-overlay.active .modal {
@@ -1072,22 +1263,29 @@
             padding: 5px;
             min-height: 44px;
             min-width: 44px;
+            transition: var(--transition);
+        }
+        
+        .modal-close:hover {
+            color: var(--accent-green);
+            transform: rotate(90deg);
         }
         
         .modal input {
             width: 100%;
             padding: 14px;
             margin-bottom: 25px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
             font-size: 1rem;
-            border: 2px solid var(--accent-green);
             min-height: 44px;
+            transition: var(--transition);
         }
         
         .modal input:focus {
             outline: var(--focus-outline);
-            border-color: var(--primary-blue);
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
         }
         
         /* Screen Reader Only */
@@ -1121,6 +1319,10 @@
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 30px;
+            }
+            
+            .hero-visual {
+                display: none;
             }
         }
         
@@ -1162,6 +1364,10 @@
             .client-logo img {
                 max-width: 140px;
                 max-height: 70px;
+            }
+            
+            .philosophy-visual {
+                display: none;
             }
         }
         
@@ -1342,6 +1548,11 @@
             .logo-sub {
                 font-size: 0.7rem;
             }
+            
+            .profile-photo-small {
+                width: 40px;
+                height: 40px;
+            }
         }
         
         @media (prefers-reduced-motion: reduce) {
@@ -1367,6 +1578,7 @@
     <header role="banner">
         <div class="container header-container">
             <div class="logo-container">
+                <!-- Placeholder for Profile Photo -->
                 <a href="#home" class="logo-link">
                     <div class="text-logo">
                         <span class="logo-main">UnRetirement</span>
@@ -1381,8 +1593,8 @@
                 <ul class="nav-links" id="navLinks" role="menubar">
                     <li role="none"><a href="#methodology" role="menuitem">The Board Translator Methodology</a></li>
                     <li role="none"><a href="#services" role="menuitem">Services</a></li>
-                    <li role="none"><a href="#contact-form-section" role="menuitem">Contact</a></li>
                     <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
+                  <li role="none"><a href="#contact-form-section" role="menuitem">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -1393,16 +1605,17 @@
         <!-- Hero Section -->
         <section class="hero" id="home" aria-labelledby="hero-title">
             <div class="container">
-                <h1 id="hero-title">Your Legacy Isn't Behind You.<br>It's What You Do Next.</h1>
-                <p class="hero-subtitle">Helping former C-suite leaders transition into board seats, advisory and fractional executive roles.</p>
-                
-                <!-- Social Proof Badge -->
-               
-                
-                <div class="hero-btns">
-                    <a href="https://unretirementexpert.setmore.com/services/1be12d35-91b8-4431-82a6-426bb9bfc696" class="btn btn-large" id="bookSessionBtn" target="_blank" rel="noopener noreferrer">Book Your Free Strategy Session</a>
-                    <button class="btn btn-secondary btn-large" id="downloadRoadmapBtn">Download the Free Roadmap (PDF)</button>
+                <div class="hero-content">
+                    <h1 id="hero-title">Your Legacy Isn't Behind You.<br>It's What You Do Next.</h1>
+                    <p class="hero-subtitle">Helping former C-suite leaders transition into board seats, advisory and fractional executive roles</p>
+                    
+                    <div class="hero-btns">
+                        <a href="https://unretirementexpert.setmore.com/services/1be12d35-91b8-4431-82a6-426bb9bfc696" class="btn btn-large" id="bookSessionBtn" target="_blank" rel="noopener noreferrer">Book Your Free Strategy Session</a>
+                        <button class="btn btn-secondary btn-large" id="downloadRoadmapBtn">Download the Free Roadmap (PDF)</button>
+                    </div>
                 </div>
+                
+                
             </div>
         </section>
 
@@ -1436,16 +1649,19 @@
                 <h2 id="testimonials-title">Trusted By Accomplished Leaders</h2>
                 <div class="testimonial-container">
                     <div class="testimonial">
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
                         <p>"The coaching was transformative. I successfully transitioned into an HR advisory role that provides the perfect blend of lifestyle freedom and deep professional meaning. This process gave me the clarity and strategy to design a career that truly fits my life."</p>
-                        <div class="testimonial-author">Adaora Emembolu, Fractional CHRO and Global Expansion Expert</div>
+                        <div class="testimonial-author"> Adaora Emembolu, Fractional CHRO and Global Expansion Expert</div>
                     </div>
                     <div class="testimonial">
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
                         <p>"After retiring, I dreaded the 'what are you up to?' question from friends and former colleagues. Now I say, 'I'm guiding two tech companies through their next growth phase as a board advisor.' It feels good to have a real answer again."</p>
-                        <div class="testimonial-author">Jay Kennedy, Fractional CFO and M&A Specialist</div>
+                        <div class="testimonial-author"> Todd Bell, Fractional CFO and M&A Specialist</div>
                     </div>
                     <div class="testimonial">
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
                         <p>"Kendra manages to ask you the right questions and makes you come up with the right answers. She guides you by asking targeted questions that help you think and learn from your past experience."</p>
-                        <div class="testimonial-author">Ahmad Mohsin, SVP of Market Research and Data Oracle</div>
+                        <div class="testimonial-author"> Ahmad Mohsin, SVP of Market Research and Data Oracle</div>
                     </div>
                 </div>
             </div>
@@ -1460,6 +1676,9 @@
                     <p>Your next chapter isn't about slowing down. It's about stepping into a different kind of influence—where your experience in finance, operations, risk, or talent becomes strategic stewardship. This is about building an active legacy.</p>
                     <a href="https://unretirementexpert.setmore.com/" class="btn" id="philosophyCtaBtn">Begin building your active legacy</a>
                 </div>
+                
+                <!-- Philosophy Visual Placeholder -->
+                
             </div>
         </section>
 
@@ -1557,7 +1776,7 @@
                             
                             <!-- Package Instructions -->
                             <div class="package-instructions">
-                                <h4><i class="fas fa-info-circle"></i> How This Works:</h4>
+                                <h4>How This Works:</h4>
                                 <ul>
                                     <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
                                     <li><strong>Full payment ($5,000)</strong> is collected at booking</li>
@@ -1591,7 +1810,7 @@
                             
                             <!-- Package Instructions -->
                             <div class="package-instructions">
-                                <h4><i class="fas fa-info-circle"></i> How This Works:</h4>
+                                <h4>How This Works:</h4>
                                 <ul>
                                     <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
                                     <li><strong>Full payment ($7,000)</strong> is collected at booking</li>
@@ -1631,22 +1850,22 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="name">Full Name *</label>
+                            <label for="name"><i class="fas fa-user"></i> Full Name *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
+                            <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
                             <input type="tel" id="phone" name="phone">
                         </div>
                         
                         <div class="form-group">
-                            <label for="interest">Primary Interest *</label>
+                            <label for="interest"><i class="fas fa-bullseye"></i> Primary Interest *</label>
                             <select id="interest" name="interest" required>
                                 <option value="">Select an option</option>
                                 <option value="Encore Strategy Session">Encore Strategy Session (Free)</option>
@@ -1660,7 +1879,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Message *</label>
+                            <label for="message"><i class="fas fa-comment"></i> Message *</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
                         
@@ -1671,8 +1890,6 @@
                         <div id="formStatus" class="form-status"></div>
                     </form>
                 </div>
-                
-                
             </div>
         </section>
 
@@ -1767,17 +1984,17 @@
                         <li><a href="#services">Encore Strategy Session</a></li>
                         <li><a href="#services">Career Navigation</a></li>
                         <li><a href="#services">Fractional Launch</a></li>
-                        <li><a href="#services">Board Accelerator</a></li>
+                        <li><a href="#services">Board-Ready Accelerator</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#" id="footerPdfLink">Free UnRetirement Roadmap (PDF)</a></li>
-                        <li><a href="audit.html">Free Board Readiness Audit</a></li>
-                        <li><a href="#newsletter-title">Book Launch Updates</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#" id="footerPdfLink"><i class="fas fa-download"></i> Free UnRetirement Roadmap (PDF)</a></li>
+                        <li><a href="audit.html"><i class="fas fa-clipboard-check"></i> Free Board Readiness Audit</a></li>
+                        <li><a href="#newsletter-title"><i class="fas fa-book"></i> Book Launch Updates</a></li>
+                        <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
                     </ul>
                 </div>
                 

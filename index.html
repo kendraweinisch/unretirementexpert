@@ -1993,8 +1993,8 @@
                     <ul>
                         <li><a href="#" id="footerPdfLink"><i class="fas fa-download"></i> Free UnRetirement Roadmap (PDF)</a></li>
                         <li><a href="audit.html"><i class="fas fa-clipboard-check"></i> Free Board Readiness Audit</a></li>
-                        <li><a href="#newsletter-title"><i class="fas fa-book"></i> Book Launch Updates</a></li>
-                        <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="#" id="footerBookLink"><i class="fas fa-book"></i> Book Launch Updates</a></li>                       
+                     <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
                     </ul>
                 </div>
                 
@@ -2256,6 +2256,7 @@
         const newsletterSubmitBtn = document.getElementById('newsletterSubmitBtn');
         const newsletterEmailInput = document.getElementById('newsletterEmail');
         
+        
         // Contact Form Elements
         const contactForm = document.getElementById('contactForm');
         const contactSubmitBtn = document.getElementById('contactSubmitBtn');
@@ -2313,7 +2314,14 @@
                 }
             });
         }
-        
+        // Book Launch link in footer
+const footerBookLink = document.getElementById('footerBookLink');
+if(footerBookLink) {
+    footerBookLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal(bookModal);
+    });
+}
         // Methodology CTA button opens PDF modal
         const methodologyCtaBtn = document.getElementById('methodologyCtaBtn');
         if(methodologyCtaBtn) {

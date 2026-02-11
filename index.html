@@ -336,7 +336,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-color: var(--accent-green);
             border-radius: 2px;
         }
-        
+        /* Logo image styles for header */
+.logo-image {
+    max-height: 50px; /* Adjust this number - try 40px to 60px */
+    width: auto;
+    height: auto;
+    transition: var(--transition);
+    display: block; /* Important for proper sizing */
+}
+
+/* For footer logo */
+.footer-logo-image {
+    max-height: 40px; /* Smaller for footer */
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+/* Optional: If logo is still too wide */
+.logo-image {
+    max-height: 50px;
+    max-width: 200px; /* Add max-width if logo is too wide */
+    width: auto;
+    height: auto;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+.footer-logo-image:hover {
+    transform: scale(1.05);
+}
         .nav-links {
             display: flex;
             list-style: none;
@@ -370,7 +401,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             min-height: 44px;
             min-width: 44px;
         }
-        
+        /* Logo image styles */
+.logo-image {
+    height: 50px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+.footer-logo-image {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.footer-logo-image:hover {
+    transform: scale(1.05);
+}
+
+/* Adjust spacing if needed */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
         /* Hero Section with enhanced visual hierarchy */
         .hero {
             padding: 160px 0 100px;
@@ -410,26 +472,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gap: 20px;
             flex-wrap: wrap;
             margin-bottom: 20px;
-        }
-        
-        /* Hero Visual Enhancement - Placeholder for Hero Image */
-        .hero-visual {
-            position: absolute;
-            bottom: 0;
-            right: 5%;
-            width: 400px;
-            height: 300px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(44, 82, 130, 0.1) 100%);
-            border-radius: 20px 20px 0 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .hero-visual i {
-            font-size: 4rem;
-            color: rgba(255, 255, 255, 0.2);
         }
         
         /* Client Logos Section - Enhanced with badges */
@@ -798,26 +840,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: var(--light-text);
         }
         
-        /* Urgency Badge */
-        .urgency-badge {
-            display: inline-block;
-            background: linear-gradient(90deg, #e74c3c, #c0392b);
-            color: white;
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-left: 10px;
-            animation: pulse 2s infinite;
-            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-            letter-spacing: 0.5px;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3); }
-            50% { transform: scale(1.05); box-shadow: 0 6px 18px rgba(231, 76, 60, 0.4); }
-            100% { transform: scale(1); box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3); }
-        }
+        /* Removed urgency-badge CSS */
         
         /* Contact Form Styles */
         .contact-form-container {
@@ -992,74 +1015,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border-color: var(--accent-green);
             outline: none;
             background: white;
-        }
-        
-        /* FAQ Section - Updated for Accessibility */
-        .faq-container {
-            max-width: 850px;
-            margin: 60px auto 0;
-        }
-        
-        .faq-item {
-            background-color: var(--white);
-            border-radius: 10px;
-            margin-bottom: 18px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(26, 43, 60, 0.08);
-            border-left: 4px solid transparent;
-            transition: var(--transition);
-        }
-        
-        .faq-item:hover {
-            border-left-color: var(--accent-green);
-            box-shadow: 0 8px 25px rgba(26, 43, 60, 0.12);
-        }
-        
-        .faq-question {
-            padding: 22px 28px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--light-bg);
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-size: 1.1rem;
-            color: var(--primary-dark);
-            transition: var(--transition);
-        }
-        
-        .faq-question:hover,
-        .faq-question:focus {
-            background-color: rgba(44, 82, 130, 0.1);
-            outline: none;
-        }
-        
-        .faq-answer {
-            padding: 0 28px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        
-        .faq-answer.open {
-            padding: 25px 28px;
-            max-height: 1000px;
-        }
-        
-        .faq-toggle {
-            color: var(--accent-green);
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-            font-weight: bold;
-            flex-shrink: 0;
-            margin-left: 15px;
-        }
-        
-        .faq-question[aria-expanded="true"] .faq-toggle {
-            transform: rotate(45deg);
         }
         
         /* Footer */
@@ -1328,10 +1283,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 grid-template-columns: repeat(2, 1fr);
                 gap: 30px;
             }
-            
-            .hero-visual {
-                display: none;
-            }
         }
         
         @media (max-width: 992px) {
@@ -1592,14 +1543,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header role="banner">
         <div class="container header-container">
             <div class="logo-container">
-                <!-- Placeholder for Profile Photo -->
-                <a href="#home" class="logo-link">
-                    <div class="text-logo">
-                        <span class="logo-main">UnRetirement</span>
-                        <span class="logo-sub">Expert</span>
-                    </div>
-                </a>
-            </div>
+    <a href="#home" class="logo-link">
+        <img src="images/UnRetirement_logo.png" alt="UnRetirement Logo" class="logo-image">
+    </a>
+</div>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
@@ -1607,8 +1554,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <ul class="nav-links" id="navLinks" role="menubar">
                     <li role="none"><a href="#methodology" role="menuitem">The Board Translator Methodology</a></li>
                     <li role="none"><a href="#services" role="menuitem">Services</a></li>
-                    <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
-                  <li role="none"><a href="#contact-form-section" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="aboutme.html" role="menuitem">About Me</a></li>
+                    <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
+                    <li role="none"><a href="#contact-form-section" role="menuitem">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -1628,15 +1576,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <button class="btn btn-secondary btn-large" id="downloadRoadmapBtn">Download the Free Roadmap (PDF)</button>
                     </div>
                 </div>
-                
-                
             </div>
         </section>
 
         <!-- Client Logos Section -->
         <section class="client-logos-section" aria-labelledby="client-logos-title">
             <div class="container client-logos-container">
-                <h3 id="client-logos-title" class="client-logos-title">Clients include former executives from</h3>
+                <h3 id="client-logos-title" class="client-logos-title">Clients include executives from</h3>
                 <div class="client-logos-grid">
                     <div class="client-logo" tabindex="0">
                         <img src="images/Toyota_logo.svg" alt="Toyota - Former Toyota executives">
@@ -1665,7 +1611,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="testimonial">
                         <div class="testimonial-quote" aria-hidden="true">"</div>
                         <p>"The coaching was transformative. I successfully transitioned into an HR advisory role that provides the perfect blend of lifestyle freedom and deep professional meaning. This process gave me the clarity and strategy to design a career that truly fits my life."</p>
-                        <div class="testimonial-author"> Adaora Emembolu, Fractional CHRO and Global Expansion Expert</div>
+                        <div class="testimonial-author">
+                            <a href="https://www.linkedin.com/in/adaoraemembolu/" target="_blank" rel="noopener noreferrer" aria-label="Adaora Emembolu on LinkedIn">
+                                Adaora Emembolu, Fractional CHRO and Global Expansion Expert
+                            </a>
+                        </div>
                     </div>
                     <div class="testimonial">
                         <div class="testimonial-quote" aria-hidden="true">"</div>
@@ -1690,9 +1640,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p>Your next chapter isn't about slowing down. It's about stepping into a different kind of influence—where your experience in finance, operations, risk, or talent becomes strategic stewardship. This is about building an active legacy.</p>
                     <a href="https://unretirementexpert.setmore.com/" class="btn" id="philosophyCtaBtn">Begin building your active legacy</a>
                 </div>
-                
-                <!-- Philosophy Visual Placeholder -->
-                
             </div>
         </section>
 
@@ -1732,7 +1679,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Services Section -->
         <section class="section-light" id="services" aria-labelledby="services-title">
             <div class="container">
-                <h2 id="services-title">Your Starting Points <span class="urgency-badge" aria-label="Limited availability">LIMITED SPOTS</span></h2>
+                <h2 id="services-title">Your Starting Points </h2>
                 
                 <div class="services-grid">
                     <!-- Service 1 -->
@@ -1793,7 +1740,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h4>How This Works:</h4>
                                 <ul>
                                     <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
-                                    <li><strong>Full payment ($5,000)</strong> is collected at booking</li>
+                                    <li><strong>Half ($2,500)</strong> is collected at booking</li>
                                     <li>During our first meeting, we'll <strong>schedule 3 additional sessions</strong></li>
                                     <li>Total: <strong>4+ hours of 1:1 coaching</strong> over 4 weeks</li>
                                     <li>Includes <strong>email support</strong> between sessions</li>
@@ -1827,7 +1774,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h4>How This Works:</h4>
                                 <ul>
                                     <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
-                                    <li><strong>Full payment ($7,000)</strong> is collected at booking</li>
+                                    <li><strong>Half ($3,500)</strong> is collected at booking</li>
                                     <li>During our first meeting, we'll <strong>schedule 3+ additional sessions</strong></li>
                                     <li>Total: <strong>6+ hours of 1:1 coaching</strong> over 6 weeks</li>
                                     <li>Includes <strong>priority email support</strong> and <strong>introduction strategy</strong></li>
@@ -1840,8 +1787,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 
-                <p style="text-align: center; margin-top: 40px; font-size: 0.95rem; color: var(--light-text);"><em>All engagements maintain strict confidentiality and professional standards. Packages include a minimum of 4 sessions.</em></p>
-            </div>
+<p style="text-align: center; margin-top: 40px; font-size: 0.95rem; color: var(--light-text); line-height: 1.5;">
+    <em>Program investments are structured in two scheduled payments. My coaching practice follows the ethical standards established by the <a href="https://coachingfederation.org/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue); font-weight: 600;">International Coaching Federation</a>. Complete program policies and satisfaction details are outlined in our Terms of Service.</em>
+</p>           
+ </div>
         </section>
 
         <!-- Contact Form Section -->
@@ -1854,7 +1803,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <form id="contactForm" class="contact-form" action="https://formspree.io/f/mqeknoko" method="POST">
                         <!-- Formspree sends to kendraweinisch@gmail.com -->
                         <input type="hidden" name="_replyto" value="kendra@unretirementexpert.com">
-                        <input type="hidden" name="_subject" value="New Contact Form Submission - UnRetirement Expert">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - UnRetirement">
                         <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
                         
                         <!-- Honey Pot Field for Spam Protection -->
@@ -1910,10 +1859,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Book Signup Section -->
         <section class="newsletter-section" aria-labelledby="newsletter-title">
             <div class="container newsletter-container">
-                <h2 id="newsletter-title">Stay Informed About "The Encore Executive"</h2>
+                <h2 id="newsletter-title">Stay Informed About "The Executive Encore"</h2>
                 <p>Be the first to know when my book launches and get exclusive insights, early access, and special pre-order discounts for my upcoming book.</p>
                 
-                <img src="images/author-photo.jpg" alt="Kendra Weinisch, author of The Encore Executive" class="author-photo">
+                <img src="images/author-photo.jpg" alt="Kendra Weinisch, author of The Executive Encore" class="author-photo">
                 
                 <form id="newsletterForm" action="https://formspree.io/f/mqeknoko" method="POST" class="newsletter-form">
                     <input type="hidden" name="_subject" value="Book Launch Notification Signup - The Encore Executive">
@@ -1924,47 +1873,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <button type="submit" class="btn btn-tertiary" id="newsletterSubmitBtn">Notify Me at Launch</button>
                 </form>
                 <p style="font-size: 0.9rem; margin-top: 20px;">No spam. Unsubscribe anytime.</p>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="section-light" id="faq" aria-labelledby="faq-title">
-            <div class="container">
-                <h2 id="faq-title">Questions I Get Asked</h2>
-                <div class="faq-container">
-                    <!-- FAQ Item 1 -->
-                    <div class="faq-item">
-                        <button class="faq-question" id="faq1-question" aria-expanded="false" aria-controls="faq1-answer">
-                            What exactly is the "UnRetirement Narrative"?
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" id="faq1-answer" aria-labelledby="faq1-question" aria-hidden="true">
-                            <p>It's the concise, powerful story of your next chapter. It moves you from "I was a CFO" to "I guide growth-stage companies through financial scaling and governance readiness." It's what you say that makes people ask for your card, not change the subject.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 2 -->
-                    <div class="faq-item">
-                        <button class="faq-question" id="faq2-question" aria-expanded="false" aria-controls="faq2-answer">
-                            I've tried board placement services without success. How is this different?
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" id="faq2-answer" aria-labelledby="faq2-question" aria-hidden="true">
-                            <p>Board placement subscription services operate on a volume model. Their business depends on keeping you subscribed, not on actually securing you a board seat. My approach is fundamentally different: I work intensively with you using objective and subjective methods to transform your leadership profile into a compelling board-ready portfolio, you into an ideal candidate, and your professional network into a buffet of connections. This isn't about subscription revenue—it's about delivering transformational results that actually get you seated.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 3 -->
-                    <div class="faq-item">
-                        <button class="faq-question" id="faq3-question" aria-expanded="false" aria-controls="faq3-answer">
-                            Do I need specific certifications for board roles?
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" id="faq3-answer" aria-labelledby="faq3-question" aria-hidden="true">
-                            <p>While certifications can enhance credibility, they're not always mandatory. The Board-Ready Accelerator includes guidance on which credentials actually matter for your goals and prepares you within the context of your complete value proposition. We focus on what truly moves the needle for your specific transition.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -1984,21 +1892,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-container">
                 <div>
                     <a href="#home" class="footer-logo-link">
-                        <div class="footer-text-logo">
-                            <span class="footer-logo-main">UnRetirement</span>
-                            <span class="footer-logo-sub">Expert</span>
-                        </div>
-                    </a>
+    <img src="images/UnRetirement_logo.png" alt="UnRetirement Logo" class="footer-logo-image">
+</a>
                     <p>Specialized strategy and support for accomplished executives designing meaningful post-corporate careers.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Services</h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#services">Encore Strategy Session</a></li>
-                        <li><a href="#services">Career Navigation</a></li>
-                        <li><a href="#services">Fractional Launch</a></li>
-                        <li><a href="#services">Board-Ready Accelerator</a></li>
+                        <li><a href="#methodology">Methodology</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="aboutme.html">About Me</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
                 
@@ -2008,7 +1913,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><a href="#" id="footerPdfLink"><i class="fas fa-download"></i> Free UnRetirement Roadmap (PDF)</a></li>
                         <li><a href="audit.html"><i class="fas fa-clipboard-check"></i> Free Board Readiness Audit</a></li>
                         <li><a href="#" id="footerBookLink"><i class="fas fa-book"></i> Book Launch Updates</a></li>                       
-                     <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
                     </ul>
                 </div>
                 
@@ -2023,7 +1927,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             
             <div class="copyright">
-                © 2026. All rights reserved. | UnRetirement Expert - Board & Fractional Transition for Executive Leaders 
+                © 2025. All rights reserved. | UnRetirement - Board & Fractional Transition for Executive Leaders 
             </div>
         </div>
     </footer>
@@ -2054,7 +1958,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="modal">
             <button class="modal-close" id="bookModalCloseBtn" aria-label="Close modal">&times;</button>
             <h3 id="bookModalTitle">Get Notified When "The Encore Executive" Launches</h3>
-            <p>Be among the first to receive exclusive content, early access, and special pre-order discounts for my upcoming book.</p>
+            <p>Be among the first to receive exclusive content, early access, and special pre-order discounts.</p>
             <p>Enter your email to join the launch notification list:</p>
             <form id="bookForm" action="https://formspree.io/f/mqeknoko" method="POST">
                 <input type="hidden" name="_subject" value="Book Launch List - The Encore Executive">
@@ -2202,35 +2106,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
         
-        // FAQ Toggle - Updated for Accessibility
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = document.getElementById(question.getAttribute('aria-controls'));
-                const isExpanded = question.getAttribute('aria-expanded') === 'true';
-                
-                question.setAttribute('aria-expanded', !isExpanded);
-                answer.setAttribute('aria-hidden', !isExpanded);
-                
-                // Toggle visual indicators
-                const toggle = question.querySelector('.faq-toggle');
-                if(isExpanded) {
-                    answer.classList.remove('open');
-                    toggle.textContent = '+';
-                } else {
-                    answer.classList.add('open');
-                    toggle.textContent = '−';
-                }
-            });
-            
-            // Add keyboard support for FAQ items
-            question.addEventListener('keydown', (e) => {
-                if(e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    question.click();
-                }
-            });
-        });
-        
         // Focus trap for modals
         function trapFocus(element) {
             const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
@@ -2269,7 +2144,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const bookForm = document.getElementById('bookForm');
         const newsletterSubmitBtn = document.getElementById('newsletterSubmitBtn');
         const newsletterEmailInput = document.getElementById('newsletterEmail');
-        
         
         // Contact Form Elements
         const contactForm = document.getElementById('contactForm');
@@ -2328,14 +2202,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }
             });
         }
+        
         // Book Launch link in footer
-const footerBookLink = document.getElementById('footerBookLink');
-if(footerBookLink) {
-    footerBookLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal(bookModal);
-    });
-}
+        const footerBookLink = document.getElementById('footerBookLink');
+        if(footerBookLink) {
+            footerBookLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(bookModal);
+            });
+        }
+        
         // Methodology CTA button opens PDF modal
         const methodologyCtaBtn = document.getElementById('methodologyCtaBtn');
         if(methodologyCtaBtn) {

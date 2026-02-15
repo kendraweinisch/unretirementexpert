@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me — Kendra Weinisch | UnRetirement Expert</title>
+    <meta name="description" content="Two decades of corporate research into effective management, psychology, and governance translation.">
+    <meta name="author" content="Kendra Weinisch | UnRetirement Expert">
+
+    <!-- Google Tag Manager (same as index) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WX436Z6C');</script>
+<!-- End Google Tag Manager -->
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Kendra Weinisch",
+        "description": "Former journalist turned UnRetirement Expert. Two decades of corporate research into organizational management, psychology, and user research.",
+        "author": {
+            "@type": "Person",
+            "name": "Kendra Weinisch",
+            "jobTitle": "Founder & UnRetirement Expert"
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/unretirement_expert_favicon.png">
+
+    <!-- Font Awesome & Google Fonts (identical to index) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ---------- BASE STYLES — EXACTLY FROM INDEX, COLOR SCHEME UNCHANGED ---------- */
+        :root {
+            --primary-dark: #1a2b3c;
+            --primary-blue: #2c5282;
+            --accent-green: #27ae60;
+            --accent-secondary: #2e8b57;
+            --light-bg: #f7f9fc;
+            --light-text: #4a5568;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+            --focus-outline: 3px solid #2c5282;
+            --focus-outline-offset: 2px;
+            /* New warm background - not white, not changing color scheme */
+            --page-bg: #f5f3f0;  /* warm, neutral oatmeal */
+            --card-bg: #ffffff;
+            --subtle-border: rgba(39,174,96,0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-dark);
+            background-color: var(--page-bg);  /* NOT white - warm neutral */
+            font-size: 1rem;
+        }
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.3; margin-bottom: 1rem; }
+        h1 { font-size: 3.2rem; font-weight: 800; color: var(--primary-dark); letter-spacing: -0.02em; }
+        h2 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent-green);
+        }
+        h3 { font-size: 1.5rem; color: var(--primary-dark); }
+        p { margin-bottom: 1.2rem; color: var(--light-text); font-size: 1.1rem; }
+        a {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+            color: var(--primary-blue);
+            transition: var(--transition);
+        }
+        a:hover, a:focus {
+            color: var(--accent-green);
+            text-decoration-thickness: 3px;
+            outline: none;
+        }
+        .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        .section-dark { background-color: var(--primary-dark); color: var(--white); }
+        .section-dark h2, .section-dark h3 { color: var(--white); }
+        .section-dark h2:after { background-color: var(--accent-green); }
+        .section-dark p { color: rgba(255,255,255,0.95); }
+        .section-light { background-color: var(--light-bg); }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--accent-green);
+            color: var(--white);
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            min-height: 44px;
+            min-width: 44px;
+        }
+        .btn:hover {
+            background-color: var(--accent-secondary);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(39,174,96,0.2);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--accent-green);
+            color: var(--accent-green);
+        }
+        .btn-secondary:hover {
+            background-color: var(--accent-green);
+            color: var(--white);
+        }
+        .btn-tertiary {
+            background-color: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+        .btn-tertiary:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        .btn-large { padding: 18px 40px; font-size: 1.1rem; }
+
+        /* ---------- HEADER (IDENTICAL TO INDEX) ---------- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(26,43,60,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-image { max-height: 50px; width: auto; transition: var(--transition); display: block; }
+        .logo-image:hover { transform: scale(1.05); }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 32px; }
+        .nav-links a {
+            color: var(--primary-dark); font-weight: 600; font-size: 1rem;
+            text-decoration: none;
+        }
+        .nav-links a:hover, .nav-links a:focus { color: var(--accent-green); text-decoration: underline; }
+        .mobile-menu-btn {
+            display: none; background: none; border: 2px solid transparent;
+            font-size: 1.5rem; color: var(--primary-blue); cursor: pointer;
+            padding: 8px; min-height: 44px; min-width: 44px;
+        }
+        .skip-to-content {
+            position: absolute; top: -40px; left: 0;
+            background: var(--accent-green); color: white; padding: 8px 16px;
+            text-decoration: none; z-index: 9999; font-weight: 600;
+        }
+        .skip-to-content:focus { top: 0; }
+        button:focus, input:focus, a:focus, .btn:focus { outline: var(--focus-outline); outline-offset: var(--focus-outline-offset); }
+
+        /* ---------- NEW LAYOUT – EDITORIAL, VISUALLY APPEALING, WARM BACKGROUND ---------- */
+        .about-wrapper {
+            padding: 160px 0 60px;
+            background-color: var(--page-bg); /* warm, not white */
+        }
+        .magazine-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        /* Editorial main – white card for contrast and readability */
+        .editorial-main {
+            background-color: var(--card-bg);
+            padding: 50px 45px;
+            box-shadow: 0 15px 30px -12px rgba(26,43,60,0.08);
+            border: 1px solid var(--subtle-border);
+            transition: var(--transition);
+        }
+        .editorial-main:hover {
+            box-shadow: 0 20px 40px -12px rgba(26,43,60,0.12);
+        }
+        .byline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-green);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        .pull-quote {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--primary-blue);
+            margin: 2.5rem 0 2.5rem 2rem;
+            padding-left: 1.8rem;
+            border-left: 6px solid var(--accent-green);
+            font-style: italic;
+            background: rgba(39,174,96,0.02);
+            padding: 1.5rem 2rem;
+            border-radius: 0 12px 12px 0;
+        }
+        /* editorial sidebar – also card style */
+        .editorial-sidebar {
+            background-color: var(--card-bg);
+            padding: 45px 35px;
+            border: 1px solid var(--subtle-border);
+            box-shadow: 0 15px 30px -12px rgba(26,43,60,0.06);
+            position: relative;
+            transition: var(--transition);
+        }
+        .editorial-sidebar:hover {
+            box-shadow: 0 20px 40px -12px rgba(26,43,60,0.1);
+        }
+        .editorial-sidebar img {
+            width: 100%;
+            max-width: 240px;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border: none;
+            box-shadow: 16px 16px 0 -6px var(--page-bg), 16px 16px 0 -2px var(--accent-green);
+            margin-bottom: 30px;
+        }
+        .sidebar-name {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+        }
+        .sidebar-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--subtle-border);
+            padding-bottom: 15px;
+        }
+        .signature-line {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 30px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            border-top: 1px solid var(--subtle-border);
+            padding-top: 25px;
+        }
+
+        /* Book feature – using accent dark, but we keep it sophisticated */
+        .book-feature {
+            background: var(--primary-dark);
+            padding: 80px 0;
+            margin-top: 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .book-card {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 60px;
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(4px);
+            padding: 50px 50px;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 25px 40px -18px rgba(0,0,0,0.4);
+        }
+        .book-card-cover {
+            flex: 0 0 200px;
+        }
+        .book-card-cover img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.35);
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
+        }
+        .book-card-cover img:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-green);
+        }
+        .book-card-details {
+            flex: 1 1 300px;
+        }
+        .book-card-details h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .book-card-details h2:after {
+            background-color: var(--accent-green);
+            width: 70px;
+        }
+        .book-tagline {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .inline-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .inline-form input {
+            flex: 1 1 220px;
+            padding: 16px 20px;
+            border: 2px solid transparent;
+            border-radius: 0;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.92);
+        }
+        .inline-form input:focus {
+            border-color: var(--accent-green);
+            outline: none;
+            background: white;
+        }
+
+        /* Final CTA – elegant dark */
+        .final-cta {
+            background: linear-gradient(145deg, #1f3345, #15232e);
+            text-align: center;
+            padding: 90px 0;
+            border-top: 1px solid rgba(39,174,96,0.2);
+        }
+
+        /* footer (identical to index) */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 80px 0 30px;
+            position: relative;
+        }
+        footer:before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+            background: linear-gradient(90deg, var(--accent-green), var(--primary-blue));
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        .footer-logo-image { max-height: 40px; width: auto; display: block; }
+        .footer-links h4 {
+            color: var(--white); margin-bottom: 25px; font-size: 1.2rem;
+            position: relative; padding-bottom: 10px;
+        }
+        .footer-links h4:after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px;
+            background-color: var(--accent-green);
+        }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            color: rgba(255,255,255,0.85); text-decoration: none; transition: var(--transition);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links a:hover, .footer-links a:focus {
+            color: var(--accent-green); transform: translateX(5px);
+        }
+        .copyright {
+            text-align: center; padding-top: 35px; border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.85); font-size: 0.9rem;
+        }
+
+        /* modals (identical to index) */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(26,43,60,0.85); display: flex; align-items: center; justify-content: center;
+            z-index: 2000; opacity: 0; visibility: hidden; transition: var(--transition); backdrop-filter: blur(5px);
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal {
+            background-color: var(--white); border-radius: 12px; width: 90%; max-width: 550px;
+            padding: 45px; text-align: center; transform: translateY(-50px); transition: transform 0.4s ease;
+            position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); border-top: 5px solid var(--accent-green);
+        }
+        .modal-overlay.active .modal { transform: translateY(0); }
+        .modal h3 { color: var(--primary-blue); }
+        .modal-close {
+            position: absolute; top: 20px; right: 20px; background: none; border: none;
+            font-size: 1.8rem; color: var(--light-text); cursor: pointer; padding: 5px;
+            min-height: 44px; min-width: 44px; transition: var(--transition);
+        }
+        .modal-close:hover { color: var(--accent-green); transform: rotate(90deg); }
+        .modal input { width: 100%; padding: 14px; margin-bottom: 25px; border: 2px solid #e2e8f0; border-radius: 8px; }
+        .modal input:focus { outline: var(--focus-outline); border-color: var(--accent-green); }
+
+        .live-region { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; }
+
+        /* responsive */
+        @media (max-width: 1024px) {
+            .magazine-grid { grid-template-columns: 1fr; }
+            .editorial-sidebar { max-width: 550px; margin: 0 auto; }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed; top: 80px; left: 0; width: 100%; background-color: var(--white);
+                flex-direction: column; align-items: center; padding: 25px 0;
+                transform: translateY(-100%); opacity: 0; transition: var(--transition); z-index: 999;
+            }
+            .nav-links.active { transform: translateY(0); opacity: 1; }
+            .nav-links li { margin: 18px 0; }
+            .mobile-menu-btn { display: block; }
+            h1 { font-size: 2.4rem; }
+            .pull-quote { font-size: 1.3rem; margin-left: 0; }
+            .editorial-main { padding: 35px 25px; }
+            .book-card { flex-direction: column; text-align: center; padding: 35px 25px; }
+            .book-card-details h2:after { left: 50%; transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WX436Z6C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <div class="live-region" id="liveRegion" aria-live="polite"></div>
+
+    <!-- HEADER — IDENTICAL TO HOME PAGE (same nav, same logo, same links) -->
+    <header role="banner">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html#home" class="logo-link">
+                    <img src="images/UnRetirement_logo.png" alt="UnRetirement Logo" class="logo-image">
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks" role="menubar">
+                    <li role="none"><a href="index.html#methodology" role="menuitem">The Board Translator Methodology</a></li>
+                    <li role="none"><a href="index.html#services" role="menuitem">Services</a></li>
+                    <li role="none"><a href="aboutme.html" role="menuitem" aria-current="page" style="color: var(--accent-green); font-weight: 700;">About Me</a></li>
+                    <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
+                    <li role="none"><a href="index.html#contact-form-section" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ABOUT – EDITORIAL LAYOUT, WARM BACKGROUND, CARDS FOR READABILITY -->
+        <div class="about-wrapper">
+            <div class="container">
+                <div class="magazine-grid">
+                    <!-- LEFT: Long-form narrative – white card on warm bg -->
+                    <div class="editorial-main">
+                        <div class="byline">UnRetirement Expert</div>
+                        <h1>I Help You See What You Already Know</h1>
+                        <p style="font-size: 1.3rem; font-weight: 500; color: var(--primary-blue);">
+I've never sat in the C-suite or held a board seat. I didn't go to business school. But I've spent twenty years watching the people who did—studying what worked, what didn't, and why.                        </p>
+                        
+                        <!-- The requested paragraph has been deleted. No client count. -->
+                        
+                        <h3 style="margin-top: 2.5rem;">What I Actually Did</h3>
+                        <p>
+I started as a writer at a national magazine in New York. That job taught me to ask uncomfortable questions and spot the story people weren't telling. When I moved into corporate work, I kept that instinct. I watched. I listened. I took notes.                        </p>
+                        <p>
+Over two decades, I saw which leaders lasted and which burned out. I noticed who got invited into the room and who kept getting passed over. It wasn't always about talent or experience—it was about how they talked about what they'd done. Whether they could connect their past to someone else's future.                        </p>
+                        <p>
+I started keeping track. Who actually got board seats? What did their stories sound like? How did they frame twenty years in operations as strategic value? I wasn't writing a dissertation—I was trying to figure out a pattern that most people couldn't see because they were too close to it.                        </p>
+                        
+                        <div class="pull-quote">
+ "Most consultants polish your resume. I help you understand why your experience actually matters to the people you want to work with."                        </div>
+                        
+                        <h3>Here's What I Actually Do</h3>
+                        <p>
+You've probably spent decades building something—a department, a division, a company. You know how to run things. But when you try to explain why that matters to a board or an investor, it sounds... flat. Like a job description instead of a value proposition.                        </p>
+                        <p>
+That's the gap I work on. Not because you don't know your stuff—you do. But because translating operational expertise into governance language is its own skill. And most people have never had to do it before.
+                        </p>
+                        <p>
+I don't have a magic formula. What I have is pattern recognition from working with enough executives to know what actually lands with boards, founders, and investors. I've interviewed board directors about what they look for. I've sat with private equity partners who explained why they passed on one advisor and hired another. I've studied the people who made the jump successfully and the ones who struggled.                        </p>
+                        <p>
+The work isn't about inventing a new version of you. It's about finding the through-line in what you've already built and saying it in a way that makes sense to people who've never sat in your seat.                        </p>
+                        <p>
+I've worked with 25 people so far. Some wanted board seats. Some wanted advisory roles. A few just wanted to figure out what came next. They all left with more clarity than they came in with.                        </p>
+                        
+                        <!-- Callout box -->
+                        <div style="background: rgba(39,174,96,0.03); padding: 30px; margin-top: 40px; border: 1px solid rgba(39,174,96,0.2); border-radius: 8px;">
+                            <p style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 0.5rem;">If You're Ready</p>
+                            <p style="margin-bottom: 1.8rem;">
+If you know you're not done but can't quite explain what you bring to the table anymore—let's talk. I'm not going to get you a board seat. But I can help you figure out why someone should want you there.                            </p>
+                            <a href="https://unretirementexpert.setmore.com/services/1be12d35-91b8-4431-82a6-426bb9bfc696" class="btn" target="_blank" rel="noopener noreferrer">Book your free strategy session</a>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: prominent author photo – white card, warm background -->
+                    <div class="editorial-sidebar">
+                        <img src="images/author-photo.jpg" alt="Kendra Weinisch – UnRetirement Expert">
+                        <div class="sidebar-name">Kendra Weinisch</div>
+                        <div class="sidebar-title">Founder & UnRetirement Expert</div>
+                        <p style="font-size: 1rem; color: var(--primary-dark);">
+                            <span style="font-weight: 700; color: var(--accent-green);">Former writer.</span> Corporate researcher. Translator.
+                        </p>
+                        <p style="font-style: italic; color: var(--light-text);">
+I don't rewrite resumes. I help you figure out what your last thirty years actually mean—and how to say that out loud.                        </p>
+                        <div class="signature-line">
+                            <i class="fas fa-feather-alt" style="color: var(--accent-green);"></i> 
+                            <span>kendra@unretirementexpert.com</span>
+                        </div>
+                        <div style="margin-top: 30px;">
+                            <a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; background: var(--light-bg); padding: 12px 28px; border: 2px solid var(--primary-blue); font-weight: 600; display: inline-flex; align-items: center; gap: 12px; border-radius: 40px; transition: var(--transition);">
+                                <i class="fab fa-linkedin" style="color: #0077b5; font-size: 1.2rem;"></i> Connect on LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOOK SECTION – DIFFERENT LAYOUT, HORIZONTAL CARD WITH COVER PNG -->
+        <section class="book-feature">
+            <div class="container">
+                <div class="book-card">
+                    <div class="book-card-cover">
+                        <img src="images/bookcover.png" alt="The Executive Encore book cover">
+                    </div>
+                    <div class="book-card-details">
+                        <h2>The Executive Encore</h2>
+                        <div class="book-tagline">The field guide for leaders who aren't done leading.</div>
+                        <p style="color: rgba(255,255,255,0.9); margin-bottom: 20px;">
+                            Pre-order access, early chapters, and exclusive governance insights — delivered before the public launch.
+                        </p>
+                        
+                        <form id="bookFormAbout" action="https://formspree.io/f/mqeknoko" method="POST" class="inline-form">
+                            <input type="hidden" name="_subject" value="Book Launch - The Executive Encore (About)">
+                            <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
+                            <label for="bookEmailAbout" class="sr-only">Email address</label>
+                            <input type="email" id="bookEmailAbout" name="email" placeholder="Your professional email" required>
+                            <button type="submit" class="btn btn-secondary" style="border-color: var(--accent-green); color: var(--accent-green); background: transparent; border-radius: 0;">Notify me</button>
+                        </form>
+                        <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 15px;">
+                            <i class="fas fa-lock" style="color: var(--accent-green);"></i> No spam. Unsubscribe anytime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA – clarity theme, dark gradient -->
+        <section class="final-cta">
+            <div class="container">
+                <h2 style="color: white; font-size: 2.4rem;">You're Closer Than You Think</h2>
+                <p style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto 30px; font-size: 1.25rem;">
+You've already done the hard part—you built something real. The only thing standing between you and what's next is being able to explain it in a way that makes sense to someone who wasn't there. That's fixable.                </p>
+                <a href="https://unretirementexpert.setmore.com" class="btn btn-large" style="background-color: var(--accent-green); color: white;" target="_blank">Book your 15‑min clarity session</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (identical to index) -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="index.html#home" class="footer-logo-link">
+                        <img src="images/UnRetirement_logo.png" alt="UnRetirement Logo" class="footer-logo-image">
+                    </a>
+                    <p>Specialized strategy and support for accomplished executives designing meaningful post-corporate careers.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#methodology">Methodology</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="aboutme.html" aria-current="page">About Me</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#" id="footerPdfLink"><i class="fas fa-download"></i> Free UnRetirement Roadmap (PDF)</a></li>
+                        <li><a href="audit.html"><i class="fas fa-clipboard-check"></i> Free Board Readiness Audit</a></li>
+                        <li><a href="#" id="footerBookLink"><i class="fas fa-book"></i> Book Launch Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="mailto:kendra@unretirementexpert.com"><i class="fas fa-envelope"></i> Email Kendra</a></li>
+                        <li><a href="https://unretirementexpert.setmore.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar"></i> Book a Session</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025. All rights reserved. | UnRetirement - Board & Fractional Transition for Executive Leaders
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS (same as index) -->
+    <div class="modal-overlay" id="pdfModal" role="dialog" aria-labelledby="pdfModalTitle" aria-hidden="true">
+        <div class="modal">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+            <h3 id="pdfModalTitle">Download Your Free UnRetirement Roadmap</h3>
+            <form id="pdfForm" action="https://formspree.io/f/mqeknoko" method="POST">
+                <input type="hidden" name="_subject" value="PDF Download - UnRetirement Roadmap (About)">
+                <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
+                <label for="pdfEmail" class="sr-only">Email</label>
+                <input type="email" id="pdfEmail" name="email" placeholder="Your professional email" required>
+                <div class="modal-btns" style="display: flex; gap: 15px; justify-content: center;">
+                    <button type="submit" class="btn">Download PDF Now</button>
+                    <button type="button" class="btn btn-secondary" id="cancelDownloadBtn">Maybe Later</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-overlay" id="bookModal" role="dialog" aria-labelledby="bookModalTitle" aria-hidden="true">
+        <div class="modal">
+            <button class="modal-close" id="bookModalCloseBtn" aria-label="Close modal">&times;</button>
+            <h3 id="bookModalTitle">Get Notified When "The Executive Encore" Launches</h3>
+            <form id="bookModalForm" action="https://formspree.io/f/mqeknoko" method="POST">
+                <input type="hidden" name="_subject" value="Book Launch List - The Executive Encore">
+                <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
+                <label for="bookModalEmail" class="sr-only">Your email</label>
+                <input type="email" id="bookModalEmail" name="email" placeholder="Your email address" required>
+                <div class="modal-btns" style="display: flex; gap: 15px; justify-content: center;">
+                    <button type="submit" class="btn btn-tertiary">Notify Me at Launch</button>
+                    <button type="button" class="btn btn-secondary" id="cancelBookBtn">Maybe Later</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript: mobile menu, modals, book signup (same as previous) -->
+    <script>
+        (function() {
+            // Mobile menu toggle — identical to index
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const nav = document.getElementById('navLinks');
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', function() {
+                    const expanded = nav.classList.toggle('active');
+                    mobileBtn.setAttribute('aria-expanded', expanded);
+                    mobileBtn.innerHTML = expanded ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                    document.getElementById('liveRegion').textContent = expanded ? 'Navigation menu opened' : 'Navigation menu closed';
+                });
+            }
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    if(mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
+                    mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+
+            // Modal logic
+            let lastFocused = null;
+            const pdfModal = document.getElementById('pdfModal');
+            const bookModal = document.getElementById('bookModal');
+            function openModal(modal) { 
+                lastFocused = document.activeElement;
+                modal.setAttribute('aria-hidden', 'false'); modal.classList.add('active'); 
+                document.body.style.overflow = 'hidden';
+                modal.querySelector('button, input, [tabindex]')?.focus();
+            }
+            function closeModal(modal) { 
+                modal.setAttribute('aria-hidden', 'true'); modal.classList.remove('active'); 
+                document.body.style.overflow = 'auto'; if (lastFocused) lastFocused.focus();
+            }
+            document.getElementById('footerPdfLink')?.addEventListener('click', (e) => { e.preventDefault(); openModal(pdfModal); });
+            document.getElementById('footerBookLink')?.addEventListener('click', (e) => { e.preventDefault(); openModal(bookModal); });
+            document.getElementById('modalCloseBtn')?.addEventListener('click', () => closeModal(pdfModal));
+            document.getElementById('cancelDownloadBtn')?.addEventListener('click', () => closeModal(pdfModal));
+            document.getElementById('bookModalCloseBtn')?.addEventListener('click', () => closeModal(bookModal));
+            document.getElementById('cancelBookBtn')?.addEventListener('click', () => closeModal(bookModal));
+            pdfModal?.addEventListener('click', (e) => { if (e.target === pdfModal) closeModal(pdfModal); });
+            bookModal?.addEventListener('click', (e) => { if (e.target === bookModal) closeModal(bookModal); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (pdfModal?.classList.contains('active')) closeModal(pdfModal); if (bookModal?.classList.contains('active')) closeModal(bookModal); } });
+
+            // Book form on about page
+            const bookFormAbout = document.getElementById('bookFormAbout');
+            if (bookFormAbout) {
+                bookFormAbout.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('bookEmailAbout').value;
+                    if (!email || !email.includes('@')) { 
+                        document.getElementById('liveRegion').textContent = 'Valid email required'; 
+                        return; 
+                    }
+                    // Success in bookModal
+                    const modal = bookModal;
+                    const modalContent = modal.querySelector('.modal');
+                    modalContent.innerHTML = `
+                        <button class="modal-close" id="bookModalCloseBtn" aria-label="Close modal">&times;</button>
+                        <div style="font-size:3.5rem;color:var(--accent-green);margin-bottom:25px;"><i class="fas fa-book-open"></i></div>
+                        <h3>You're on the list!</h3>
+                        <p><strong>Thank you for joining "The Executive Encore" launch list.</strong></p>
+                        <p>We'll send updates to <strong>${email}</strong>.</p>
+                        <div style="margin-top:35px;"><button class="btn btn-tertiary" id="closeBookSuccessBtn">Close</button></div>
+                    `;
+                    openModal(modal);
+                    document.getElementById('closeBookSuccessBtn').addEventListener('click', () => closeModal(modal));
+                    document.getElementById('bookModalCloseBtn').addEventListener('click', () => closeModal(modal));
+                    fetch(bookFormAbout.action, { method: 'POST', body: new FormData(bookFormAbout), headers: { 'Accept': 'application/json' } }).catch(e=>{});
+                });
+            }
+
+            // PDF form (simplified)
+            document.getElementById('pdfForm')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('pdfEmail').value;
+                if (!email.includes('@')) return;
+                const modal = pdfModal; const mc = modal.querySelector('.modal');
+                mc.innerHTML = `<button class="modal-close" id="modalCloseBtn">&times;</button><div style="font-size:3.5rem;color:var(--accent-green);margin-bottom:25px;"><i class="fas fa-check-circle"></i></div><h3>Success! Check your inbox.</h3><p>Roadmap sent to <strong>${email}</strong>.</p><div style="margin-top:35px;"><button class="btn" id="closeSuccessBtn">Close</button></div>`;
+                document.getElementById('modalCloseBtn').addEventListener('click', ()=>closeModal(modal));
+                document.getElementById('closeSuccessBtn').addEventListener('click', ()=>closeModal(modal));
+                setTimeout(()=>{ let a = document.createElement('a'); a.href = 'images/UnRetirement_Roadmap.pdf'; a.download = 'UnRetirement-Roadmap.pdf'; a.click(); }, 500);
+            });
+
+            window.addEventListener('scroll', function() {
+                let header = document.querySelector('header');
+                header.style.boxShadow = window.scrollY > 100 ? '0 5px 25px rgba(26,43,60,0.1)' : '0 2px 15px rgba(26,43,60,0.08)';
+                header.style.backgroundColor = 'var(--white)';
+            });
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.style.scrollBehavior = 'auto';
+        })();
+    </script>
+</body>
+</html>

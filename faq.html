@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - UnRetirement Expert | Your Questions Answered</title>
+    <meta name="description" content="Common questions about UnRetirement services, the Board Translator Methodology, pricing, ethics, and how to transition to board and fractional executive roles.">
+    <meta name="author" content="Kendra Weinisch | UnRetirement Expert">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WX436Z6C');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "name": "UnRetirement Expert FAQ",
+        "description": "Frequently asked questions about UnRetirement career coaching services, board positioning, and fractional executive transitions.",
+        "author": {
+            "@type": "Person",
+            "name": "Kendra Weinisch",
+            "jobTitle": "Founder & UnRetirement Expert"
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/unretirement_expert_favicon.png">
+
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* BASE STYLES */
+        :root {
+            --primary-dark: #1a2b3c;
+            --primary-blue: #2c5282;
+            --accent-green: #27ae60;
+            --accent-secondary: #2e8b57;
+            --light-bg: #f7f9fc;
+            --light-text: #4a5568;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+            --focus-outline: 3px solid #2c5282;
+            --focus-outline-offset: 2px;
+            --page-bg: #f5f3f0;
+            --card-bg: #ffffff;
+            --subtle-border: rgba(39,174,96,0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-dark);
+            background-color: var(--page-bg);
+            font-size: 1rem;
+        }
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.3; margin-bottom: 1rem; }
+        h1 { font-size: 3.2rem; font-weight: 800; color: var(--primary-dark); letter-spacing: -0.02em; }
+        h2 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent-green);
+        }
+        h3 { font-size: 1.5rem; color: var(--primary-dark); }
+        p { margin-bottom: 1.2rem; color: var(--light-text); font-size: 1.1rem; }
+        a {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+            color: var(--primary-blue);
+            transition: var(--transition);
+        }
+        a:hover, a:focus {
+            color: var(--accent-green);
+            text-decoration-thickness: 3px;
+            outline: none;
+        }
+        .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+
+        /* HEADER */
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(26,43,60,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-link { display: flex; align-items: center; text-decoration: none; }
+        .logo-image { height: 50px; width: auto; }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            min-height: 44px;
+            min-width: 44px;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        .nav-links a:hover, .nav-links a:focus { color: var(--accent-green); }
+
+        /* SKIP LINK */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            background: var(--accent-green);
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            z-index: 2000;
+        }
+        .skip-to-content:focus { top: 10px; outline: var(--focus-outline); }
+
+        /* FAQ HERO */
+        .faq-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #2c4a5f 100%);
+            color: var(--white);
+            padding: 100px 0 80px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-green);
+        }
+        .faq-hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+        }
+        .faq-hero p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* FAQ NAVIGATION */
+        .faq-nav {
+            background: var(--white);
+            padding: 30px 0;
+            border-bottom: 2px solid var(--subtle-border);
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+            box-shadow: 0 2px 10px rgba(26,43,60,0.05);
+        }
+        .faq-nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            list-style: none;
+        }
+        .faq-nav-links a {
+            color: var(--primary-blue);
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+        .faq-nav-links a:hover, .faq-nav-links a:focus {
+            background: var(--light-bg);
+            color: var(--accent-green);
+        }
+
+        /* FAQ SECTIONS */
+        .faq-section {
+            padding: 80px 0;
+            background: var(--card-bg);
+            margin-bottom: 40px;
+        }
+        .faq-section:nth-child(even) {
+            background: var(--page-bg);
+        }
+        .faq-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+
+        /* FAQ ITEMS */
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--subtle-border);
+            border-radius: 12px;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(26,43,60,0.03);
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(26,43,60,0.08);
+            border-color: var(--accent-green);
+        }
+        .faq-question {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .faq-question i {
+            color: var(--accent-green);
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        .faq-answer p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        .faq-answer ul {
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+            color: var(--light-text);
+        }
+        .faq-answer strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* HIGHLIGHT BOX */
+        .highlight-box {
+            background: rgba(39,174,96,0.05);
+            border-left: 4px solid var(--accent-green);
+            padding: 20px 25px;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA SECTION */
+        .faq-cta {
+            background: linear-gradient(135deg, #1f3345, #15232e);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+            border-top: 5px solid var(--accent-green);
+        }
+        .faq-cta h2 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+        .faq-cta h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-green);
+        }
+        .faq-cta p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--accent-green);
+            color: var(--white);
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            min-height: 44px;
+            min-width: 44px;
+        }
+        .btn:hover {
+            background-color: var(--accent-secondary);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(39,174,96,0.2);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--accent-green);
+            color: var(--accent-green);
+        }
+        .btn-secondary:hover {
+            background-color: var(--accent-green);
+            color: var(--white);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 80px 0 30px;
+            position: relative;
+        }
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-green), var(--primary-blue));
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        .footer-logo-image { max-height: 40px; width: auto; display: block; }
+        .footer-links h4 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-links h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-green);
+        }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .footer-links a:hover, .footer-links a:focus {
+            color: var(--accent-green);
+            transform: translateX(5px);
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 35px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.85);
+            font-size: 0.9rem;
+        }
+
+        /* MODALS */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(26,43,60,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal {
+            background-color: var(--white);
+            border-radius: 12px;
+            width: 90%;
+            max-width: 550px;
+            padding: 45px;
+            text-align: center;
+            transform: translateY(-50px);
+            transition: transform 0.4s ease;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-top: 5px solid var(--accent-green);
+        }
+        .modal-overlay.active .modal { transform: translateY(0); }
+        .modal h3 { color: var(--primary-blue); }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--light-text);
+            cursor: pointer;
+            padding: 5px;
+            min-height: 44px;
+            min-width: 44px;
+            transition: var(--transition);
+        }
+        .modal-close:hover { color: var(--accent-green); transform: rotate(90deg); }
+        .modal input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 25px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+        }
+        .modal input:focus {
+            outline: var(--focus-outline);
+            border-color: var(--accent-green);
+        }
+
+        .live-region { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 25px 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            .nav-links.active { transform: translateY(0); opacity: 1; }
+            .nav-links li { margin: 18px 0; }
+            .mobile-menu-btn { display: block; }
+            h1 { font-size: 2.4rem; }
+            .faq-hero h1 { font-size: 2.5rem; }
+            .faq-nav { top: 70px; }
+            .faq-nav-links { gap: 15px; }
+            .faq-item { padding: 25px 20px; }
+            .faq-question { font-size: 1.2rem; }
+            .faq-section h2 { font-size: 2rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WX436Z6C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <div class="live-region" id="liveRegion" aria-live="polite"></div>
+
+    <!-- HEADER -->
+    <header role="banner">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html#home" class="logo-link">
+                    <img src="images/UnRetirement_logo.png" alt="UnRetirement Logo" class="logo-image">
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks" role="menubar">
+                    <li role="none"><a href="index.html#methodology" role="menuitem">The Board Translator Methodology</a></li>
+                    <li role="none"><a href="index.html#services" role="menuitem">Services</a></li>
+                    <li role="none"><a href="aboutme.html" role="menuitem">About Me</a></li>
+                    <li role="none"><a href="faq.html" role="menuitem" aria-current="page" style="color: var(--accent-green); font-weight: 700;">FAQ</a></li>
+                    <li role="none"><a href="index.html#contact-form-section" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- FAQ HERO -->
+        <section class="faq-hero">
+            <div class="container">
+                <h1>Frequently Asked Questions</h1>
+                <p>Everything you need to know about UnRetirement services, pricing, the Board Translator Methodology, and how to transition to your next chapter.</p>
+            </div>
+        </section>
+
+        <!-- FAQ NAVIGATION -->
+        <nav class="faq-nav" aria-label="FAQ topics">
+            <ul class="faq-nav-links">
+                <li><a href="#services">About the Services</a></li>
+                <li><a href="#payment">Payment & Pricing</a></li>
+                <li><a href="#expectations">What to Expect</a></li>
+                <li><a href="#methodology">The Methodology</a></li>
+                <li><a href="#relevance">Staying Relevant</a></li>
+                <li><a href="#ethics">Ethics & Confidentiality</a></li>
+                <li><a href="#logistics">Logistics</a></li>
+                <li><a href="#getting-started">Getting Started</a></li>
+            </ul>
+        </nav>
+
+        <!-- ABOUT THE SERVICES -->
+        <section id="services" class="faq-section">
+            <div class="container">
+                <div class="faq-content">
+                    <h2>About the Services</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What exactly do you do?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I help experienced executives translate their operational expertise into language that makes sense to boards, fractional clients, and advisory roles. This isn't resume writing or job placement—it's strategic positioning work. We figure out what your last 20+ years actually mean to someone who wasn't there, and how to say that in a way that opens doors.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What's the difference between the Fractional Launch Program and the Board-Ready Accelerator?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The <strong>Fractional Launch Program</strong> is for executives who want to transition into fractional COO, CFO, or executive roles with startups and growth-stage companies. You get your positioning strategy, portfolio materials, networking framework, LinkedIn templates, and a customized roadmap, plus 4+ hours of 1:1 coaching and email support between sessions.</p>
+                            <p>The <strong>Board-Ready Accelerator</strong> is focused specifically on board and advisory positions. In addition to positioning strategy and portfolio materials, you get a Signature Board Value Matrix, private equity and board member introductions, support with NACD Directorship certification if needed, 6+ hours of 1:1 coaching, and email support.</p>
+                            <p>Both programs include what I call your "UnRetirement Narrative"—the through-line that makes your experience legible to people who've never sat in your seat.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>How long does the process take?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most clients complete their program within 8-12 weeks, but the timeline is flexible based on your schedule and needs. Sessions are scheduled by mutual agreement. Unused sessions expire 90 days from your first session, though we can discuss extensions if circumstances require it.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What if I'm not sure which program is right for me?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Book a free 15-minute clarity session first. We'll talk about where you are, what you're trying to do next, and which path makes the most sense. No pressure, no sales pitch—just an honest conversation about whether this work is right for you.</p>
+                            <p><a href="https://unretirementexpert.setmore.com" target="_blank" rel="noopener noreferrer">Schedule your free clarity session →</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAYMENT & PRICING -->
+        <section id="payment" class="faq-section">
+            <div class="container">
+                <div class="faq-content">
+                    <h2>Payment & Pricing</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>How does payment work for packages?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Two-part payment</strong>: 50% non-refundable deposit when you book, remaining 50% due before your third session</p>
+                            
+                            <p>Payment is processed through Setmore when you schedule your first appointment.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What's your refund policy?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All fees are non-refundable once you've signed the agreement and booked your first session. Here's why: when you enroll, I reserve dedicated time and resources specifically for you. I turn down other potential clients to make space for your work.</p>
+                            <p>That said, I'm committed to your success and satisfaction. If you have concerns at any point, I expect you to tell me directly. We'll work together to adjust the approach, modify session formats, or change the focus to better meet your needs. The goal is to make this work—not to take your money and disappear.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Can I cancel or reschedule individual sessions?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. You can cancel or reschedule with at least 24 hours' notice. Cancellations with less than 24 hours' notice count as a completed session (because that time was blocked for you and can't be filled on short notice).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT TO EXPECT -->
+        <section id="expectations" class="faq-section">
+            <div class="container">
+                <div class="faq-content">
+                    <h2>What You Can Expect</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Do you guarantee I'll get a board seat or fractional role?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, and you should be skeptical of anyone who does.</p>
+                            <p>I don't place people. I'm not a recruiter or a headhunter. What I do is help you understand and articulate why your experience matters to the people you want to work with. Clarity is what makes you selectable—but actually getting selected depends on timing, fit, network, and a dozen other variables I can't control.</p>
+                            <p>What I can tell you: clients who do this work leave with a much clearer sense of their value proposition, better positioning materials, and a roadmap for moving forward. Many land roles within 6-12 months. Some take longer. A few decide they want something completely different after gaining clarity. All of that counts as success in my book.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What makes your approach different from subscription services like Boardsi?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>This is an important distinction. Services like Boardsi operate on a subscription model—you pay a monthly fee (typically $195/month after a setup fee) to stay in their matching platform. As long as you're paying, you have access. Stop paying, and your profile disappears.</p>
+                            <p>I don't work that way. You pay once for a specific body of work, and when we're done, you own everything—your narrative, your materials, your strategy. There's no ongoing subscription. No monthly fees. No pressure to stay enrolled while you're actively searching.</p>
+                            <div class="highlight-box">
+                                <p><strong>The other key difference:</strong> Boardsi is a matching platform that connects you with opportunities in their network. I help you build the foundation that makes you attractive to any opportunity—whether that's through a platform, your own network, warm introductions, or cold outreach. The work we do together isn't dependent on any single platform or gatekeeper.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What about other board placement services?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most board placement services either charge companies to fill seats (executive search firms) or charge candidates a recurring fee to access a matching platform (like Boardsi). Neither model does the foundational work of helping you understand and articulate your strategic value.</p>
+                            <p>Search firms are great—if you're already in their network and they have an open role that fits. But they're working for the company, not for you. Subscription platforms give you access but rarely provide strategic guidance on positioning. You're on your own to figure out how to stand out.</p>
+                            <p>I do the work that comes before any of that: helping you build a compelling case for why you belong in the room, so that when opportunities arise—through any channel—you're ready.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE BOARD TRANSLATOR METHODOLOGY -->
+        <section id="methodology" class="faq-section">
+            <div class="container">
+                <div class="faq-content">
+                    <h2>The Board Translator Methodology</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What is the Board Translator Methodology?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>It's the framework I've developed over two decades of watching which executives successfully transition to boards and advisory roles—and which ones don't.</p>
+                            <p>The core insight: operational expertise doesn't automatically translate into governance language. You can run a $100M P&L, but if you can't articulate how that experience applies to oversight, risk management, and strategic guidance, it's invisible to board members.</p>
+                            <p>The methodology has three parts:</p>
+                            <ol>
+                                <li><strong>Strategic Audit</strong>: We inventory your career for governance-relevant competencies (not just titles or achievements)</li>
+                                <li><strong>Translation Work</strong>: We map your operational experience to board-level value in areas like risk, growth, compliance, technology, talent, M&A, etc.</li>
+                                <li><strong>Narrative Architecture</strong>: We build a coherent story that makes your expertise legible to people who've never worked in your industry or function</li>
+                            </ol>
+                            <p>It's not magic. It's pattern recognition applied systematically to your career.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Is this methodology proven?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>It's built from studying what actually works, not from theory. I've coached more than 25 executives, interviewed sitting board directors, talked to founders about why they choose one advisor over another, and tracked the career arcs of executives who successfully made the jump.</p>
+                            <p>The methodology itself is continuously refined based on what I learn from each client engagement and from staying current with governance research, SEC trends, and behavioral economics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STAYING RELEVANT -->
+        <section id="relevance" class="faq-section">
+            <div class="container">
+                <div class="faq-content">
+                    <h2>Staying Relevant in a Changing Landscape</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>I've been out of the day-to-day for a while. How do I stay current with trends like AI without looking like I'm faking it?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>This is one of the most common concerns I hear, and it's a legitimate one. Boards don't want someone who stopped learning five years ago. But they also don't want someone who throws around buzzwords like "generative AI transformation" without understanding what they actually mean.</p>
+                            <p>Here's the truth: you don't need to become a data scientist or learn to code. What you need is <strong>strategic fluency</strong>—the ability to ask the right questions about how emerging technologies affect risk, operations, talent, and competitive positioning.</p>
+                            <p>I help clients develop this fluency in several ways:</p>
+                            
+                            <div class="highlight-box">
+                                <p><strong>AI & Technology Literacy:</strong> We work on understanding AI's practical business applications (not the hype). What does it mean when a portfolio company says they're "AI-native"? How do you evaluate whether their automation strategy is sound or reckless? What questions should you ask about data governance, algorithmic bias, or AI-related liability? You don't need to understand transformer models—you need to understand business implications.</p>
+                            </div>
+
+                            <p><strong>Current Governance Trends:</strong> I stay current with SEC guidance, emerging regulations (like EU AI Act implications for US companies), NACD research, and board composition trends. Part of our work together involves translating your deep operational experience through the lens of current governance priorities—not 2015 priorities.</p>
+
+                            <p><strong>Digital Positioning Skills:</strong> Most executives your age underestimate how much boards and fractional clients use LinkedIn to vet candidates. We work on strategic LinkedIn positioning (not "personal branding"—I hate that term). This includes how to engage meaningfully with industry trends, when to share insights, and how to signal you're still intellectually active without looking like you're trying too hard.</p>
+
+                            <p><strong>Continuous Learning Framework:</strong> I'll recommend specific resources—podcasts, newsletters, reports—that keep you current without overwhelming you. The goal isn't to know everything. It's to know enough to ask informed questions and spot when someone's selling snake oil.</p>
+
+                            <p><strong>Generational Translation:</strong> Boards increasingly want executives who can work across generations—from Boomer founders to Gen Z employees. We discuss how to position your experience as wisdom without sounding out of touch, and how to demonstrate you understand workforce expectations have changed.</p>
+
+                            <p>The executives who stay relevant aren't the ones who pretend to be 35. They're the ones who bring decades of pattern recognition AND show they understand today's context. That combination is rare and valuable—but only if you can articulate it.</p>
+
+                            <div class="highlight-box">
+                                <p><strong>Bottom line:</strong> I won't make you an AI expert. But I will help you speak credibly about technology's business impact, position yourself as someone who's still learning, and demonstrate that your experience is an asset in a rapidly changing environment—not a liability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETHICS & CONFIDENTIALITY -->
+        <section id="ethics" class="faq-section">
+            <div class="container">
+                <div class="faq-content">
+                    <h2>Ethics & Confidentiality</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>How do you handle confidential information?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Everything we discuss in our sessions is confidential. Period. I don't share your information, your career plans, or anything about your situation with anyone unless legally required to do so.</p>
+                            <p>If you're currently employed and exploring what comes next, that stays between us. If you're concerned about a specific competitive situation or sensitive transition, we'll discuss how to handle it carefully.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What ethical standards do you follow?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I follow the <a href="https://coachingfederation.org/ethics/code-of-ethics" target="_blank" rel="noopener noreferrer">International Coaching Federation (ICF) Code of Ethics</a>, which includes standards around confidentiality, conflicts of interest, professional conduct, and honest representation of services. This means:</p>
+                            <ul>
+                                <li>I maintain confidentiality unless you give explicit permission to share or I'm legally required to disclose</li>
+                                <li>I disclose any potential conflicts of interest upfront</li>
+                                <li>I accurately represent what I do and don't do (I don't guarantee outcomes I can't control)</li>
+                                <li>I refer you elsewhere if your needs fall outside my expertise</li>
+                                <li>I'm committed to ongoing professional development and staying current in the field</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What if I'm unhappy with the service?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tell me directly. I'd rather know immediately if something isn't working than have you suffer through sessions that aren't valuable.</p>
+                            <p>If you have concerns, here's what I expect: communicate them in writing, work with me to find a solution, and give me a reasonable chance to adjust the approach or provide alternatives. I'm not perfect, but I'm responsive and committed to making this work.</p>
+                            <p>Both of us have a responsibility to work in good faith toward a resolution. That might mean changing session formats, adjusting the coaching focus, or rescheduling to better fit your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGISTICS -->
+        <section id="logistics" class="faq-section">
+            <div class="container">
+                <div class="faq-content">
+                    <h2>Logistics</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Where do sessions take place?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All sessions are conducted online via Google Meet. You can be anywhere, we can share screens, and you have your materials in front of you.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What if I need to reach you between sessions?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Email support is included in both programs. I typically respond within 24-48 hours on business days. If something urgent comes up, let me know in the subject line.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Do you work with people outside the United States?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. As long as we can find a mutually workable time for video sessions, geography doesn't matter.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>I'm still employed. Can we keep this confidential?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely. Many of my clients are currently employed and exploring what comes next. We'll discuss how to handle your positioning work discreetly, including how to use LinkedIn strategically without broadcasting your plans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GETTING STARTED -->
+        <section id="getting-started" class="faq-section">
+            <div class="container">
+                <div class="faq-content">
+                    <h2>Still Have Questions?</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>How do I get started?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><a href="https://unretirementexpert.setmore.com" target="_blank" rel="noopener noreferrer">Book a free 15-minute clarity session</a>. We'll talk about where you are and whether this approach makes sense for you. No obligation, no pressure.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What if I'm not ready to commit yet?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>That's fine. Download the <a href="#" id="faqPdfLink">free UnRetirement Roadmap</a> to get a sense of the process, or <a href="#" id="faqBookLink">sign up for book launch updates</a> to stay in touch. When you're ready, I'm here.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Can I speak with past clients?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Due to confidentiality (many clients are in sensitive transitions), I don't provide references without their explicit permission. What I can do: share anonymized examples of positioning work during our initial clarity session, so you can see what the output looks like.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>What if my question isn't answered here?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><a href="mailto:kendra@unretirementexpert.com">Email me directly</a> or <a href="https://unretirementexpert.setmore.com" target="_blank" rel="noopener noreferrer">schedule a time to talk</a>. I'm happy to answer any questions you have about the process, the methodology, or whether this work is right for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="faq-cta">
+            <div class="container">
+                <h2>Ready to figure out what comes next?</h2>
+                <p>Book your free 15-minute clarity session. We'll talk about where you are and whether this approach makes sense for you.</p>
+                <a href="https://unretirementexpert.setmore.com" class="btn" target="_blank" rel="noopener noreferrer">Book Your Free Clarity Session</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="index.html#home" class="footer-logo-link">
+                        <img src="images/UnRetirement_logo.png" alt="UnRetirement Logo" class="footer-logo-image">
+                    </a>
+                    <p>Specialized strategy and support for accomplished executives designing meaningful post-corporate careers.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#methodology">Methodology</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="aboutme.html">About Me</a></li>
+                        <li><a href="faq.html" aria-current="page">FAQ</a></li>
+                        <li><a href="index.html#contact-form-section">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#" id="footerPdfLink"><i class="fas fa-download"></i> Free UnRetirement Roadmap</a></li>
+                        <li><a href="audit.html"><i class="fas fa-clipboard-check"></i> Free Board Readiness Audit</a></li>
+                        <li><a href="#" id="footerBookLink"><i class="fas fa-book"></i> Book Launch Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="mailto:kendra@unretirementexpert.com"><i class="fas fa-envelope"></i> Email Kendra</a></li>
+                        <li><a href="https://unretirementexpert.setmore.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar"></i> Book a Session</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025. All rights reserved. | UnRetirement - Board & Fractional Transition for Executive Leaders
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modal-overlay" id="pdfModal" role="dialog" aria-labelledby="pdfModalTitle" aria-hidden="true">
+        <div class="modal">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+            <h3 id="pdfModalTitle">Download Your Free UnRetirement Roadmap</h3>
+            <form id="pdfForm" action="https://formspree.io/f/mqeknoko" method="POST">
+                <input type="hidden" name="_subject" value="PDF Download - UnRetirement Roadmap (FAQ)">
+                <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
+                <label for="pdfEmail" class="sr-only">Email</label>
+                <input type="email" id="pdfEmail" name="email" placeholder="Your professional email" required>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <button type="submit" class="btn">Download PDF Now</button>
+                    <button type="button" class="btn btn-secondary" id="cancelDownloadBtn">Maybe Later</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-overlay" id="bookModal" role="dialog" aria-labelledby="bookModalTitle" aria-hidden="true">
+        <div class="modal">
+            <button class="modal-close" id="bookModalCloseBtn" aria-label="Close modal">&times;</button>
+            <h3 id="bookModalTitle">Get Notified When "The Executive Encore" Launches</h3>
+            <form id="bookModalForm" action="https://formspree.io/f/mqeknoko" method="POST">
+                <input type="hidden" name="_subject" value="Book Launch List - The Executive Encore (FAQ)">
+                <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
+                <label for="bookModalEmail" class="sr-only">Your email</label>
+                <input type="email" id="bookModalEmail" name="email" placeholder="Your email address" required>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <button type="submit" class="btn btn-secondary">Notify Me at Launch</button>
+                    <button type="button" class="btn btn-secondary" id="cancelBookBtn">Maybe Later</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const nav = document.getElementById('navLinks');
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', function() {
+                    const expanded = nav.classList.toggle('active');
+                    mobileBtn.setAttribute('aria-expanded', expanded);
+                    mobileBtn.innerHTML = expanded ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                    document.getElementById('liveRegion').textContent = expanded ? 'Navigation menu opened' : 'Navigation menu closed';
+                });
+            }
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    if(mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
+                    mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+
+            // Modal logic
+            let lastFocused = null;
+            const pdfModal = document.getElementById('pdfModal');
+            const bookModal = document.getElementById('bookModal');
+            function openModal(modal) {
+                lastFocused = document.activeElement;
+                modal.setAttribute('aria-hidden', 'false');
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                modal.querySelector('button, input, [tabindex]')?.focus();
+            }
+            function closeModal(modal) {
+                modal.setAttribute('aria-hidden', 'true');
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                if (lastFocused) lastFocused.focus();
+            }
+            
+            // PDF modal triggers
+            document.getElementById('footerPdfLink')?.addEventListener('click', (e) => { e.preventDefault(); openModal(pdfModal); });
+            document.getElementById('faqPdfLink')?.addEventListener('click', (e) => { e.preventDefault(); openModal(pdfModal); });
+            document.getElementById('modalCloseBtn')?.addEventListener('click', () => closeModal(pdfModal));
+            document.getElementById('cancelDownloadBtn')?.addEventListener('click', () => closeModal(pdfModal));
+            
+            // Book modal triggers
+            document.getElementById('footerBookLink')?.addEventListener('click', (e) => { e.preventDefault(); openModal(bookModal); });
+            document.getElementById('faqBookLink')?.addEventListener('click', (e) => { e.preventDefault(); openModal(bookModal); });
+            document.getElementById('bookModalCloseBtn')?.addEventListener('click', () => closeModal(bookModal));
+            document.getElementById('cancelBookBtn')?.addEventListener('click', () => closeModal(bookModal));
+            
+            pdfModal?.addEventListener('click', (e) => { if (e.target === pdfModal) closeModal(pdfModal); });
+            bookModal?.addEventListener('click', (e) => { if (e.target === bookModal) closeModal(bookModal); });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    if (pdfModal?.classList.contains('active')) closeModal(pdfModal);
+                    if (bookModal?.classList.contains('active')) closeModal(bookModal);
+                }
+            });
+
+            // PDF form submission
+            document.getElementById('pdfForm')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('pdfEmail').value;
+                if (!email.includes('@')) return;
+                const modal = pdfModal;
+                const mc = modal.querySelector('.modal');
+                mc.innerHTML = `
+                    <button class="modal-close" id="modalCloseBtn">&times;</button>
+                    <div style="font-size:3.5rem;color:var(--accent-green);margin-bottom:25px;"><i class="fas fa-check-circle"></i></div>
+                    <h3>Success! Check your inbox.</h3>
+                    <p>Roadmap sent to <strong>${email}</strong>.</p>
+                    <div style="margin-top:35px;"><button class="btn" id="closeSuccessBtn">Close</button></div>
+                `;
+                document.getElementById('modalCloseBtn').addEventListener('click', () => closeModal(modal));
+                document.getElementById('closeSuccessBtn').addEventListener('click', () => closeModal(modal));
+                setTimeout(() => {
+                    let a = document.createElement('a');
+                    a.href = 'images/UnRetirement_Roadmap.pdf';
+                    a.download = 'UnRetirement-Roadmap.pdf';
+                    a.click();
+                }, 500);
+            });
+
+            // Book form submission
+            document.getElementById('bookModalForm')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('bookModalEmail').value;
+                if (!email.includes('@')) return;
+                const modal = bookModal;
+                const mc = modal.querySelector('.modal');
+                mc.innerHTML = `
+                    <button class="modal-close" id="bookModalCloseBtn">&times;</button>
+                    <div style="font-size:3.5rem;color:var(--accent-green);margin-bottom:25px;"><i class="fas fa-book-open"></i></div>
+                    <h3>You're on the list!</h3>
+                    <p><strong>Thank you for joining "The Executive Encore" launch list.</strong></p>
+                    <p>We'll send updates to <strong>${email}</strong>.</p>
+                    <div style="margin-top:35px;"><button class="btn btn-secondary" id="closeBookSuccessBtn">Close</button></div>
+                `;
+                document.getElementById('bookModalCloseBtn').addEventListener('click', () => closeModal(modal));
+                document.getElementById('closeBookSuccessBtn').addEventListener('click', () => closeModal(modal));
+                fetch(this.action, {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: { 'Accept': 'application/json' }
+                }).catch(e => {});
+            });
+
+            // Header shadow on scroll
+            window.addEventListener('scroll', function() {
+                let header = document.querySelector('header');
+                header.style.boxShadow = window.scrollY > 100 ? '0 5px 25px rgba(26,43,60,0.1)' : '0 2px 10px rgba(26,43,60,0.05)';
+            });
+        })();
+    </script>
+</body>
+</html>

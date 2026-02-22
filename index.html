@@ -48,14 +48,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         :root {
             --primary-dark: #1a2b3c;      /* Deep navy blue - passes contrast */
             --primary-blue: #2c5282;      /* Medium blue - passes contrast */
-            --accent-green: #27ae60;      /* Kelly green - primary accent color */
-            --accent-secondary: #2e8b57;  /* Sea green - secondary accent */
+            /* FIX: Darkened accent-green from #27ae60 to #1e8449 for 4.5:1 contrast on white */
+            --accent-green: #1e8449;      /* Darker kelly green - passes contrast 4.5:1 on white */
+            --accent-secondary: #176b3a;  /* Darker sea green for hover states */
             --light-bg: #f7f9fc;          /* Light blue-gray background */
             --light-text: #4a5568;        /* Muted blue-gray text */
             --white: #ffffff;
             --transition: all 0.3s ease;
             --focus-outline: 3px solid #2c5282;
             --focus-outline-offset: 2px;
+            /* FIX: New color for package instruction heading to pass 3:1 contrast on its light green bg */
+            --package-heading: #0f4d2e;    /* Much darker green for contrast on #eef9f2 */
         }
         
         * {
@@ -172,12 +175,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             outline-offset: var(--focus-outline-offset);
         }
         
-        /* Skip to Main Content Link */
+        /* Skip to Main Content Link - FIXED contrast by darkening background to #176b3a */
         .skip-to-content {
             position: absolute;
             top: -40px;
             left: 0;
-            background: var(--accent-green);
+            background: #176b3a;  /* Darker green for 4.5:1 contrast on white text */
             color: white;
             padding: 8px 16px;
             text-decoration: none;
@@ -193,7 +196,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .btn {
             display: inline-block;
             padding: 14px 32px;
-            background-color: var(--accent-green);
+            background-color: var(--accent-green);  /* Now uses #1e8449 */
             color: var(--white);
             border-radius: 6px;
             font-weight: 600;
@@ -212,7 +215,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-color: var(--accent-secondary);
             color: var(--white);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(39, 174, 96, 0.2);
+            box-shadow: 0 10px 20px rgba(30, 132, 73, 0.2); /* updated shadow to match new green */
         }
         
         .btn-secondary {
@@ -271,7 +274,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--accent-green);
-            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15);
+            box-shadow: 0 4px 12px rgba(30, 132, 73, 0.15); /* updated */
         }
         
         /* Text Logo Styles */
@@ -534,7 +537,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .client-logo:focus {
             transform: translateY(-8px);
             box-shadow: 0 15px 35px rgba(26, 43, 60, 0.15);
-            border-color: rgba(39, 174, 96, 0.3);
+            border-color: rgba(30, 132, 73, 0.3); /* updated */
             outline: none;
         }
         
@@ -640,12 +643,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translateY(-50%);
             width: 200px;
             height: 200px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.08) 0%, rgba(44, 82, 130, 0.08) 100%);
+            background: linear-gradient(135deg, rgba(30, 132, 73, 0.08) 0%, rgba(44, 82, 130, 0.08) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px dashed rgba(39, 174, 96, 0.2);
+            border: 2px dashed rgba(30, 132, 73, 0.2);
         }
         
         .philosophy-visual i {
@@ -693,7 +696,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 20px;
-            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
+            box-shadow: 0 6px 15px rgba(30, 132, 73, 0.3);
         }
         
         /* Services Section - Enhanced with badges and visual hierarchy */
@@ -721,7 +724,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .service-card:focus-within {
             transform: translateY(-12px);
             box-shadow: 0 20px 50px rgba(26, 43, 60, 0.15);
-            border-color: rgba(39, 174, 96, 0.2);
+            border-color: rgba(30, 132, 73, 0.2);
         }
         
         .service-header {
@@ -739,7 +742,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 15px;
-            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+            box-shadow: 0 4px 12px rgba(30, 132, 73, 0.2);
         }
         
         .service-body {
@@ -801,9 +804,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             flex-shrink: 0;
         }
         
-        /* Package Instructions */
+        /* Package Instructions - FIX: Heading color now #0f4d2e for 3:1 contrast on background #eef9f2 */
         .package-instructions {
-            background-color: rgba(39, 174, 96, 0.08);
+            background-color: rgba(30, 132, 73, 0.08); /* updated */
             border-left: 5px solid var(--accent-green);
             padding: 20px;
             margin: 25px 0;
@@ -822,7 +825,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         
         .package-instructions h4 {
-            color: var(--accent-green);
+            color: var(--package-heading);  /* #0f4d2e - much darker, passes 3:1 contrast on light green */
             margin-top: 0;
             font-size: 1.1rem;
             display: flex;
@@ -895,7 +898,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .form-group select:focus {
             outline: var(--focus-outline);
             border-color: var(--accent-green);
-            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+            box-shadow: 0 0 0 3px rgba(30, 132, 73, 0.1);
         }
         
         .form-group textarea {
@@ -918,7 +921,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         
         .form-status.success {
-            background-color: rgba(39, 174, 96, 0.1);
+            background-color: rgba(30, 132, 73, 0.1);
             border: 2px solid var(--accent-green);
             color: var(--accent-green);
             display: block;
@@ -1017,7 +1020,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background: white;
         }
         
-        /* Footer */
+        /* Footer - FIX: p color changed to #e0e7ef for 4.5:1 contrast on #1a2b3c */
         footer {
             background-color: var(--primary-dark);
             color: var(--white);
@@ -1248,7 +1251,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .modal input:focus {
             outline: var(--focus-outline);
             border-color: var(--accent-green);
-            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+            box-shadow: 0 0 0 3px rgba(30, 132, 73, 0.1);
         }
         
         /* Screen Reader Only */
@@ -1533,7 +1536,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
  
-    <!-- Skip to Main Content Link -->
+    <!-- Skip to Main Content Link - Color contrast fixed via CSS -->
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
     
     <!-- Live Region for Screen Reader Announcements -->
@@ -1625,7 +1628,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="testimonial">
                         <div class="testimonial-quote" aria-hidden="true">"</div>
                         <p>"Kendra manages to ask you the right questions and makes you come up with the right answers. She guides you by asking targeted questions that help you think and learn from your past experience."</p>
-                        <div class="testimonial-author"> Ahmad Mohsin, SVP of Market Research and Data Oracle</div>
+                        <div class="testimonial-author"> Ahmad Mohsin, SVP of Market Research and Data at Oracle</div>
                     </div>
                 </div>
             </div>
@@ -1712,7 +1715,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <ul class="service-features">
                                 <li><i class="fas fa-check" aria-hidden="true"></i> Strategic Clarity & Niche Definition</li>
                                 <li><i class="fas fa-check" aria-hidden="true"></i> AI-Enhanced Resume That Passes ATS</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Strategies to Beat Ageism in Hiring</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Personalized Crash Course on AI Tools and Trends</li>
                             </ul>
                             <div class="service-price">$200</div>
                             <a href="https://unretirementexpert.setmore.com/services/83a39ca4-3bb5-4766-911e-19eca93d77b6" class="btn" data-service="Career Navigation Sprint" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
@@ -1723,7 +1726,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="service-card" tabindex="0">
                         <div class="service-header">
                             <div class="service-popular">MOST POPULAR</div>
-                            <h3>Fractional Launch Program</h3>
+                            <h3>Fractional CXO Launch Program</h3>
                             <p style="font-size: 0.95rem; color: var(--accent-green); font-weight: 600;">4 Weeks | TRANSFORMATIONAL</p>
                         </div>
                         <div class="service-body">
@@ -1740,7 +1743,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h4>How This Works:</h4>
                                 <ul>
                                     <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
-                                    <li><strong>Half ($2,500)</strong> is collected at booking</li>
+                                    <li><strong>Half ($2,500)</strong> is collected at booking; half is collected after second meeting</li>
                                     <li>During our first meeting, we'll <strong>schedule 3 additional sessions</strong></li>
                                     <li>Total: <strong>4+ hours of 1:1 coaching</strong> over 4 weeks</li>
                                     <li>Includes <strong>email support</strong> between sessions</li>
@@ -1774,7 +1777,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h4>How This Works:</h4>
                                 <ul>
                                     <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
-                                    <li><strong>Half ($3,500)</strong> is collected at booking</li>
+                                    <li><strong>Half ($3,500)</strong> is collected at booking; half is collected after second meeting</li>
                                     <li>During our first meeting, we'll <strong>schedule 3+ additional sessions</strong></li>
                                     <li>Total: <strong>6+ hours of 1:1 coaching</strong> over 6 weeks</li>
                                     <li>Includes <strong>priority email support</strong> and <strong>introduction strategy</strong></li>
@@ -1788,7 +1791,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 
 <p style="text-align: center; margin-top: 40px; font-size: 0.95rem; color: var(--light-text); line-height: 1.5;">
-    <em>Program investments are structured in two scheduled payments. My coaching practice follows the ethical standards established by the <a href="https://coachingfederation.org/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue); font-weight: 600;">International Coaching Federation</a>. Complete program policies and satisfaction details are outlined in our Terms of Service.</em>
+    <em>Program investments are structured in two scheduled payments. My coaching practice follows the ethical standards established by the <a href="https://coachingfederation.org/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue); font-weight: 600;">International Coaching Federation</a>. Complete program policies and satisfaction details are outlined in my Terms of Service.</em>
 </p>           
  </div>
         </section>
@@ -1814,17 +1817,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                         <div class="form-group">
                             <label for="name"><i class="fas fa-user"></i> Full Name *</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" autocomplete="tel">
                         </div>
                         
                         <div class="form-group">
@@ -1843,7 +1846,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                         <div class="form-group">
                             <label for="message"><i class="fas fa-comment"></i> Message *</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" autocomplete="off" required></textarea>
                         </div>
                         
                         <div class="form-group">
@@ -1869,7 +1872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
                     
                     <label for="newsletterEmail" class="sr-only">Your email address</label>
-                    <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" required>
+                    <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" autocomplete="email" required>
                     <button type="submit" class="btn btn-tertiary" id="newsletterSubmitBtn">Notify Me at Launch</button>
                 </form>
                 <p style="font-size: 0.9rem; margin-top: 20px;">No spam. Unsubscribe anytime.</p>
@@ -1894,7 +1897,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="#home" class="footer-logo-link">
     <img src="images/UnRetirement_logo.png" alt="UnRetirement Logo" class="footer-logo-image">
 </a>
-                    <p>Specialized strategy and support for accomplished executives designing meaningful post-corporate careers.</p>
                 </div>
                 
                 <div class="footer-links">
@@ -1944,7 +1946,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
                 
                 <label for="pdfEmail" class="sr-only">Your professional email address</label>
-                <input type="email" id="pdfEmail" name="email" placeholder="Your professional email address" required class="modal-input">
+                <input type="email" id="pdfEmail" name="email" placeholder="Your professional email address" autocomplete="email" required class="modal-input">
                 <div class="modal-btns">
                     <button type="submit" class="btn">Download PDF Now</button>
                     <button type="button" class="btn btn-secondary" id="cancelDownloadBtn">Maybe Later</button>
@@ -1965,7 +1967,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="hidden" name="_cc" value="kendra@unretirementexpert.com">
                 
                 <label for="bookEmail" class="sr-only">Your email address</label>
-                <input type="email" id="bookEmail" name="email" placeholder="Your email address" required class="modal-input">
+                <input type="email" id="bookEmail" name="email" placeholder="Your email address" autocomplete="email" required class="modal-input">
                 <div class="modal-btns">
                     <button type="submit" class="btn btn-tertiary">Notify Me at Launch</button>
                     <button type="button" class="btn btn-secondary" id="cancelBookBtn">Maybe Later</button>

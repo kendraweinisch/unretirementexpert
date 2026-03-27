@@ -702,7 +702,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         /* Services Section - Enhanced with badges and visual hierarchy */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 25px;
             margin-top: 60px;
         }
@@ -824,7 +824,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-size: 0.8rem;
         }
         
-        .package-instructions h4 {
+        .package-instructions h3.package-instructions-heading {
             color: var(--package-heading);  /* #0f4d2e - much darker, passes 3:1 contrast on light green */
             margin-top: 0;
             font-size: 1.1rem;
@@ -1109,7 +1109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border-radius: 2px;
         }
         
-        .footer-links h4 {
+        .footer-links h3.footer-heading {
             color: var(--white);
             margin-bottom: 25px;
             font-size: 1.2rem;
@@ -1117,7 +1117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding-bottom: 10px;
         }
         
-        .footer-links h4:after {
+        .footer-links h3.footer-heading:after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -1420,7 +1420,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             
             .services-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 25px;
             }
             
@@ -1583,9 +1583,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </section>
 
         <!-- Client Logos Section -->
-        <section class="client-logos-section" aria-labelledby="client-logos-title">
+        <section class="client-logos-section" aria-label="Clients include executives from">
             <div class="container client-logos-container">
-                <h3 id="client-logos-title" class="client-logos-title">Clients include executives from</h3>
+                <p id="client-logos-title" class="client-logos-title">Clients include executives from</p>
                 <div class="client-logos-grid">
                     <div class="client-logo" tabindex="0">
                         <img src="images/Toyota_logo.svg" alt="Toyota - Former Toyota executives">
@@ -1729,6 +1729,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- Service 3 -->
                     <div class="service-card" tabindex="0">
                         <div class="service-header">
+                            <h3>Expansion Sprint</h3>
+                            <p style="font-size: 0.95rem; color: var(--accent-green); font-weight: 600;">3–4 Weeks | STRATEGIC FOUNDATION</p>
+                        </div>
+                        <div class="service-body">
+                            <p><em>Build your next chapter while you're still in this one.</em></p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Your "What's Next" Clarity Audit — identify what's driving the restlessness and what you actually want from what comes next</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Positioning Preview — a first draft of your executive narrative, built for quiet visibility before you're ready to make a move</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> LinkedIn Stealth Strategy — signal relevance and build thought leadership without broadcasting that you're exploring</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Your 90-Day On-Ramp Roadmap — a concrete action plan for what to do right now, before you're ready to fully transition</li>
+                            </ul>
+
+                            <!-- Package Instructions -->
+                            <div class="package-instructions">
+                                <h3 class="package-instructions-heading">How This Works:</h3>
+                                <ul>
+                                    <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
+                                    <li><strong>Half ($750)</strong> is collected at booking; half is collected before your second session</li>
+                                    <li>Sessions scheduled by mutual agreement over 3–4 weeks</li>
+                                    <li>Includes <strong>email support</strong> between sessions</li>
+                                    <li>Optional: add a <strong>30-day follow-up check-in</strong> for $2,000 total</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-price">$1,500 <span style="font-size: 1rem; font-weight: 500; color: var(--light-text); display: block; margin-top: 4px;">or $2,000 with 30-day check-in</span></div>
+                            <a href="https://unretirementexpert.setmore.com/" class="btn" data-service="Expansion Sprint" target="_blank" rel="noopener noreferrer">BOOK FIRST SESSION</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card" tabindex="0">
+                        <div class="service-header">
                             <div class="service-popular">MOST POPULAR</div>
                             <h3>Fractional CXO Launch Program</h3>
                             <p style="font-size: 0.95rem; color: var(--accent-green); font-weight: 600;">4 Weeks | TRANSFORMATIONAL</p>
@@ -1744,7 +1776,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                             <!-- Package Instructions -->
                             <div class="package-instructions">
-                                <h4>How This Works:</h4>
+                                <h3 class="package-instructions-heading">How This Works:</h3>
                                 <ul>
                                     <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
                                     <li><strong>Half ($2,500)</strong> is collected at booking; half is collected after second meeting</li>
@@ -1759,7 +1791,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                     
-                    <!-- Service 4 -->
+                    <!-- Service 5 -->
                     <div class="service-card" tabindex="0">
                         <div class="service-header">
                             <h3>Board-Ready Accelerator</h3>
@@ -1778,7 +1810,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                             <!-- Package Instructions -->
                             <div class="package-instructions">
-                                <h4>How This Works:</h4>
+                                <h3 class="package-instructions-heading">How This Works:</h3>
                                 <ul>
                                     <li>Book your <strong>first 60-minute session</strong> through Setmore (link below)</li>
                                     <li><strong>Half ($3,500)</strong> is collected at booking; half is collected after second meeting</li>
@@ -1840,6 +1872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <option value="">Select an option</option>
                                 <option value="Encore Strategy Session">Encore Strategy Session (Free)</option>
                                 <option value="Career Navigation Sprint">Career Navigation Sprint</option>
+                                <option value="Expansion Sprint">Expansion Sprint</option>
                                 <option value="Fractional Launch Program">Fractional Launch Program</option>
                                 <option value="Board-Ready Accelerator">Board-Ready Accelerator</option>
                                 <option value="General Inquiry">General Inquiry</option>
@@ -1904,7 +1937,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h3 class="footer-heading">Quick Links</h3>
                     <ul>
                         <li><a href="#methodology">Methodology</a></li>
                         <li><a href="#services">Services</a></li>
@@ -1914,7 +1947,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Resources</h4>
+                    <h3 class="footer-heading">Resources</h3>
                     <ul>
                         <li><a href="#" id="footerPdfLink"><i class="fas fa-download"></i> Free UnRetirement Roadmap (PDF)</a></li>
                         <li><a href="audit.html"><i class="fas fa-clipboard-check"></i> Free Board Readiness Audit</a></li>
@@ -1923,10 +1956,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Connect</h4>
+                    <h3 class="footer-heading">Connect</h3>
                     <ul>
                         <li><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-                        <li><a href="mailto:kendra@unretirementexpert.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email Kendra</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#d2b9b7bcb6a0b392a7bca0b7a6bba0b7bfb7bca6b7aaa2b7a0a6fcb1bdbf"><i class="fas fa-envelope" aria-hidden="true"></i> Email Kendra</a></li>
                         <li><a href="https://unretirementexpert.setmore.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar" aria-hidden="true"></i> Book a Session</a></li>
                     </ul>
                 </div>
@@ -1939,7 +1972,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <!-- PDF Download Modal -->
-    <div class="modal-overlay" id="pdfModal" role="dialog" aria-labelledby="pdfModalTitle" aria-hidden="true">
+    <div class="modal-overlay" id="pdfModal" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle" aria-hidden="true">
         <div class="modal">
             <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
             <h3 id="pdfModalTitle">Download Your Free UnRetirement Roadmap</h3>
@@ -1960,7 +1993,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- Book Notification Modal -->
-    <div class="modal-overlay" id="bookModal" role="dialog" aria-labelledby="bookModalTitle" aria-hidden="true">
+    <div class="modal-overlay" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="bookModalTitle" aria-hidden="true">
         <div class="modal">
             <button class="modal-close" id="bookModalCloseBtn" aria-label="Close modal">&times;</button>
             <h3 id="bookModalTitle">Get Notified When "The Encore Executive" Launches</h3>
@@ -1981,7 +2014,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- Analytics Tracking Code -->
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Track website visits
         function trackVisit() {
             const visitData = {
@@ -2486,10 +2519,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 console.log(`Service clicked: ${service}`);
                 
                 // Track service clicks
-                const serviceClicks = parseInt(localStorage.getItem(`service_${service}_clicks`) || '0');
-                localStorage.setItem(`service_${service}_clicks`, (serviceClicks + 1).toString());
-            });
-        });
-    </script>
-</body>
-</html>
+                const serviceClicks = parseInt(localStorage.getItem(`service_${service}_clicks`) || '0
